@@ -15,7 +15,6 @@ public abstract class CommonGenerator extends StubGenerators {
     protected final Builder _cfg;
     protected final ClassName _className;
     protected final String _simpleName;
-    protected final TypeSpec.Builder _class;
     protected final MethodSpec.Builder _constructor = MethodSpec.constructorBuilder();
 
     // instance fields
@@ -23,16 +22,26 @@ public abstract class CommonGenerator extends StubGenerators {
     protected static final String SELF = "self()";
     protected static final String STATIC_VTABLE = "$vtable";
 
+    protected TypeSpec.Builder _class;
+
     protected VirtualMethodsBuilder _virtualMethodHandles;
+    protected Modifier[] _classModifiers = {Modifier.PUBLIC, Modifier.FINAL};
+    protected Modifier[] _memberMethodModifiers = {Modifier.PUBLIC, Modifier.FINAL};
+    protected Modifier[] _staticObjectMethodModifiers = {Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL};
+    protected boolean _addSetters = true;
+    protected boolean _addGetters = true;
 
     protected CommonGenerator(Builder config, String prefix, String suffix) {
         _simpleName = prefix + config.baseName + suffix;
         _cfg = config;
         _className = ClassName.get(config.packageName, _simpleName);
+        _virtualMethodHandles = new VirtualMethodsBuilder(config, _className, STATIC_VTABLE);
+    }
+
+    public void initClass() {
         _class = TypeSpec
                 .classBuilder(_simpleName)
-                .addModifiers(Modifier.PUBLIC, Modifier.FINAL);
-        _virtualMethodHandles = new VirtualMethodsBuilder(config, _className, STATIC_VTABLE);
+                .addModifiers(_classModifiers);
     }
 
     public void addInterfaces() {
@@ -43,6 +52,7 @@ public abstract class CommonGenerator extends StubGenerators {
 
     @Override
     public void build(Consumer<JavaFile> spec) {
+        initClass();
         addInterfaces();
         addConstructors();
         addVirtualMethods();
@@ -126,7 +136,7 @@ public abstract class CommonGenerator extends StubGenerators {
 
         // Our public method, delegating to Vtable.Method(address(), args);
         addMethod(newMethod(methodName, signature, 1)
-                .addModifiers(Modifier.PUBLIC, Modifier.FINAL)
+                .addModifiers(_memberMethodModifiers)
                 .addCode("""
                         return $T.$L(address()$L);
                         """, _virtualMethodHandles._className, methodName, proxyArgsList(signature, 1, true)));
@@ -137,9 +147,9 @@ public abstract class CommonGenerator extends StubGenerators {
             try {
                 String rawMethodName = method.getName();
                 String prefix;
-                if (rawMethodName.endsWith("$get") || rawMethodName.endsWith("$slice")) {
+                if (_addGetters && (rawMethodName.endsWith("$get") || rawMethodName.endsWith("$slice"))) {
                     prefix = "get";
-                } else if (rawMethodName.endsWith("$set")) {
+                } else if (_addSetters && rawMethodName.endsWith("$set")) {
                     prefix = "set";
                 } else {
                     continue;
@@ -149,7 +159,7 @@ public abstract class CommonGenerator extends StubGenerators {
 
                 MethodSpec.Builder methodSpec = this
                         .newMethod(localMethodName, method, 1)
-                        .addModifiers(Modifier.PUBLIC, Modifier.FINAL);
+                        .addModifiers(_memberMethodModifiers);
 
                 String ret = method.getReturnType() == void.class ? "" : "return ";
 
@@ -181,14 +191,14 @@ public abstract class CommonGenerator extends StubGenerators {
         // public final MemoryAddress address() { return _self.address(); }
         addMethod(MethodSpec
                 .methodBuilder("address")
-                .addModifiers(Modifier.PUBLIC, Modifier.FINAL)
+                .addModifiers(_memberMethodModifiers)
                 .returns(ClassNames.MEMORY_ADDRESS)
                 .addCode("return self().address();"));
 
         // public final MemorySegment self() { return _self; }
         addMethod(MethodSpec
                 .methodBuilder("self")
-                .addModifiers(Modifier.PUBLIC, Modifier.FINAL)
+                .addModifiers(_memberMethodModifiers)
                 .returns(ClassNames.MEMORY_SEGMENT)
                 .addCode("return $L;", FINAL_SELF));
     }
@@ -198,7 +208,7 @@ public abstract class CommonGenerator extends StubGenerators {
             // public static final MemoryLayout layout() { return MyInterface.$LAYOUT(); }
             addMethod(MethodSpec
                     .methodBuilder("layout")
-                    .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
+                    .addModifiers(_staticObjectMethodModifiers)
                     .returns(ClassNames.MEMORY_LAYOUT)
                     .addCode("return $T.$L();", _cfg.linkedInterfaceClass, "$LAYOUT"));
         }
@@ -207,7 +217,7 @@ public abstract class CommonGenerator extends StubGenerators {
             // public static final long sizeof() { return MyInterface.sizeof(); }
             addMethod(MethodSpec
                     .methodBuilder("sizeof")
-                    .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
+                    .addModifiers(_staticObjectMethodModifiers)
                     .returns(long.class)
                     .addCode("return $T.sizeof();", _cfg.linkedInterfaceClass));
         }

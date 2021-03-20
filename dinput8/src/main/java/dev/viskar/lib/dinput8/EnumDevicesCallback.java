@@ -1,5 +1,6 @@
 package dev.viskar.lib.dinput8;
 
+import dev.viskar.lib.dinput8.natives.TDIDEVICEINSTANCEW;
 import jdk.incubator.foreign.MemoryAddress;
 import jdk.incubator.foreign.MemorySegment;
 import jdk.incubator.foreign.NativeScope;

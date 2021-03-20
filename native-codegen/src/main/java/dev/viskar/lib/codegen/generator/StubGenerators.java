@@ -15,20 +15,16 @@ public abstract class StubGenerators {
 
     static final MethodHandles.Lookup LOOKUP = MethodHandles.lookup();
 
-    public static Builder builder(Class<?> stub) {
-        return new Builder(stub.getPackageName(), stub.getSimpleName());
-    }
-
-    public static Builder builder(String packageName, String baseName) {
-        return new Builder(packageName, baseName);
+    public static Builder builder(Class<?> cType, Class<?> constantsClass) {
+        return new Builder(cType, constantsClass);
     }
 
     protected abstract void build(Consumer<JavaFile> spec);
 
     public static class Builder {
 
-        public String packageName;
-        public String baseName;
+        public final String packageName;
+        public final String baseName;
         public Class<?> linkedConstantsClass;
         public Class<?> linkedInterfaceClass;
         public Class<?> linkedVtableClass;
@@ -36,15 +32,16 @@ public abstract class StubGenerators {
         public final List<StubGenerators> generators = new ArrayList<>();
         public final List<ClassName> interfaces = new ArrayList<>();
 
-        public Builder(Class<?> cType) {
+        public Builder(Class<?> cType, Class<?> constantsClass) {
             this.packageName = cType.getPackageName();
             this.baseName = cType.getSimpleName();
             this.linkedInterfaceClass = cType;
+            this.linkedConstantsClass = constantsClass;
             try {
                 this.linkedVtableClass = Class.forName(cType.getName() + "Vtbl", false, getClass().getClassLoader());
                 this.linkedVtableName = "lpVtbl";
             } catch (Throwable t) {
-                // no vtbl for this type
+                // ignore
             }
         }
 
@@ -80,6 +77,7 @@ public abstract class StubGenerators {
         public Builder toSingleton(ClassName initializerClass, String initializerMethod) {
             generators.add(new StaticGenerator(this, initializerClass, initializerMethod));
             generators.add(new SingletonGenerator(this));
+            generators.add(new DefaultInterfaceGenerator(this));
             return this;
         }
 
@@ -93,11 +91,14 @@ public abstract class StubGenerators {
         }
 
         public Builder toObject() {
-            generators.add(new InstanceGenerator(this, "T", "" ));
+            generators.add(new InstanceGenerator(this, "T", ""));
             return this;
         }
 
         public void build(Consumer<JavaFile> receiver) {
+            if (linkedConstantsClass == null) {
+                throw new IllegalArgumentException("constantsClass not set");
+            }
             for (StubGenerators generator : generators) {
                 generator.build(receiver);
             }
@@ -122,7 +123,7 @@ public abstract class StubGenerators {
     protected static void copySignature(MethodSpec.Builder builder, Method method, int paramOffset) {
         builder.returns(method.getReturnType());
         Parameter[] params = method.getParameters();
-        for(int i = paramOffset; i < params.length; i++) {
+        for (int i = paramOffset; i < params.length; i++) {
             Parameter param = params[i];
             boolean namePresent = param.isNamePresent();
             String name = param.getName();
@@ -134,7 +135,7 @@ public abstract class StubGenerators {
         StringBuilder sb = new StringBuilder();
         Parameter[] params = proxyMethod.getParameters();
 
-        for(int i = paramOffset; i < params.length; i++) {
+        for (int i = paramOffset; i < params.length; i++) {
             Parameter param = params[i];
             sb.append(", ");
             boolean namePresent = param.isNamePresent();

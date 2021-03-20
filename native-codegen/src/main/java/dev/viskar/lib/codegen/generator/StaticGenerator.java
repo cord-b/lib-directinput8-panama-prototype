@@ -17,6 +17,9 @@ public class StaticGenerator extends CommonGenerator {
         this.initializerClass = initializerClass;
         this.initializerMethod = initializerMethod;
         this.FINAL_SELF = "$self";
+        _memberMethodModifiers = new Modifier[]{Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL};
+        _addSetters = false;
+        _addGetters = false;
     }
 
     @Override
@@ -42,22 +45,6 @@ public class StaticGenerator extends CommonGenerator {
                         "$T.$L($L).asSegmentRestricted($T.sizeof())",
                         _cfg.linkedInterfaceClass, _cfg.linkedVtableName + "$get", FINAL_SELF, _cfg.linkedVtableClass)
                 .build());
-    }
-
-    @Override
-    protected void addField(FieldSpec.Builder field) {
-        if (!field.modifiers.contains(Modifier.STATIC)) {
-            field.addModifiers(Modifier.STATIC);
-        }
-        super.addField(field);
-    }
-
-    @Override
-    protected void addMethod(MethodSpec.Builder method) {
-        if (!method.modifiers.contains(Modifier.STATIC)) {
-            method.addModifiers(Modifier.STATIC);
-        }
-        super.addMethod(method);
     }
 
     @Override

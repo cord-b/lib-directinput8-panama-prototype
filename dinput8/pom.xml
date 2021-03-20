@@ -42,12 +42,12 @@
                                 <classpath/>
                                 <argument>--add-modules</argument>
                                 <argument>jdk.incubator.foreign</argument>
-                                <argument>dev.viskar.lib.codegen.Main</argument>
-                                <argument>-F ${project.basedir}/src/main/generated</argument>
+                                <argument>dev.viskar.lib.codegen.generator.Generator</argument>
+                                <argument>-F ${project.basedir}${file.separator}src${file.separator}main${file.separator}generated</argument>
                                 <argument>-P dev.viskar.lib.dinput8.natives</argument>
                                 <argument>-H dinput_h</argument>
                                 <argument>-C dinput_h_constants_5</argument>
-                                <argument>-S IDirectInput8W</argument>
+                                <argument>-S IDirectInput8W::dev.viskar.lib.dinput8.internal.DirectInput8WInitializer::initialize</argument>
                                 <argument>-I IDirectInputDevice8W</argument>
                                 <argument>-X .*[1-7][AW].*</argument>
                                 <argument>-X .*[8][A].*</argument>

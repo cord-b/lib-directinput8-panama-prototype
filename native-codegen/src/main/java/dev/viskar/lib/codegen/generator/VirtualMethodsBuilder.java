@@ -29,7 +29,7 @@ public class VirtualMethodsBuilder {
         // }
         _class = TypeSpec
                 .classBuilder(_className)
-                .addModifiers(Modifier.STATIC, Modifier.FINAL);
+                .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL);
 
         _class.addField(FieldSpec
                 .builder(ClassNames.MEMORY_SEGMENT, VTABLE, Modifier.PRIVATE, Modifier.STATIC, Modifier.FINAL)
@@ -58,7 +58,7 @@ public class VirtualMethodsBuilder {
         //         }
         //     }
         _class.addField(FieldSpec
-                .builder(MethodHandle.class, fieldName, Modifier.STATIC, Modifier.FINAL)
+                .builder(MethodHandle.class, fieldName, Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
                 .initializer("""
                                 $T.downcallHandle(
                                     $T.$L($L),
@@ -74,7 +74,7 @@ public class VirtualMethodsBuilder {
 
         _class.addMethod(StubGenerators
                 .newMethod(methodName, signature, 0)
-                .addModifiers(Modifier.STATIC)
+                .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
                 .addCode("""
                         try {
                             return ($T)$L.invokeExact($L);
