@@ -2,37 +2,65 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>net.viskar</groupId>
-    <artifactId>library-dinput8</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <groupId>dev.viskar</groupId>
+    <artifactId>lib-dinput8-parent</artifactId>
+    <version>BRANCH-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.squareup</groupId>
-            <artifactId>javapoet</artifactId>
-            <version>1.13.0</version>
-        </dependency>
-    </dependencies>
+    <properties>
+        <javapoet.version>1.13.0</javapoet.version>
+    </properties>
+
+    <modules>
+        <module>native-codegen</module>
+        <module>dinput8-jextract</module>
+
+        <module>dinput8</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- modules -->
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>lib-dinput8</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>lib-dinput8-jextract</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>lib-native-codegen</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <verbose>true</verbose>
-                    <fork>true</fork>
-                    <executable>C:\Program Files\Java\jdk-17-panama\bin\javac.exe</executable>
-                    <compilerVersion>17</compilerVersion>
-                    <compilerArgs>
-                        <arg>-g</arg>
-                        <arg>-parameters</arg>
-                    </compilerArgs>
-                    <release>17</release>
-                </configuration>
-            </plugin>
-        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <verbose>false</verbose>
+                        <fork>true</fork>
+                        <executable>javac</executable>
+                        <compilerVersion>17</compilerVersion>
+                        <compilerArgs>
+                            <arg>-g</arg>
+                            <arg>-parameters</arg>
+                            <arg>--add-modules</arg>
+                            <arg>jdk.incubator.foreign</arg>
+                        </compilerArgs>
+                        <release>17</release>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
-
 
 </project>
