@@ -13,12 +13,12 @@ usable native code wrappers.
 ## Summary
 
 * The JDK `jextract` tool generates low-level classes based on `dinput.h`
-  into `lib-dinput8-jextract/dev.viskar.lib.dinput8.natives`
-* The `native-codegen` module contains an experimental code-generator tool that can generate code based on the classes
+  into `lib-directinput8-jextract/dev.viskar.lib.dinput8.natives`
+* The `lib-common-codegen` module contains an experimental code-generator tool that can generate code based on the classes
   output by`jextract`. This code generate produces human-friendly code on top of the jextract code. This crucially
   provides the massive amounts of setup code to create Class/Interface objects with all of their virtual methods
   resolved into method handles and corresponding java methods + wrapper classes.
-* The `lib-dinput8` module provides the final hand-written code, adding in javadocs and slight interface improvements.
+* The `lib-directinput8` module provides the final hand-written code, adding in javadocs and slight interface improvements.
 
 # Code Generation Walkthrough
 
