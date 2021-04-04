@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>dev.viskar</groupId>
+        <artifactId>lib-directinput8-parent</artifactId>
+        <version>main-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>lib-directinput8</artifactId>
+
+    <description>
+        A library for using DirectInput in Java, without having to load any JNI code.
+        Almost all the internal code in these modules is auto-generated, with just the top-level user-friendly
+        interfaces/classes being hand written.
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>dev.viskar</groupId>
+            <artifactId>lib-directinput8-jextract</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dev.viskar</groupId>
+            <artifactId>lib-native-codegen</artifactId>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>windows</id>
+            <activation>
+                <os><family>windows</family></os>
+            </activation>
+            <build>
+                <plugins>
+                    <!-- Generate more sources -->
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>3.0.0</version>
+                        <executions>
+                            <execution>
+                                <id>generate</id>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <phase>generate-sources</phase>
+                                <configuration>
+                                    <executable>java</executable>
+                                    <basedir>${project.basedir}</basedir>
+                                    <arguments>
+                                        <!-- provide classpath -->
+                                        <argument>-classpath</argument>
+                                        <classpath/>
+                                        <!-- jvm junk -->
+                                        <argument>-Dforeign.restricted=permit</argument>
+                                        <argument>--add-modules</argument>
+                                        <argument>jdk.incubator.foreign</argument>
+                                        <argument>--illegal-access=permit</argument>g>
+                                        <argument>--add-opens=java.desktop/sun.awt.windows=ALL-UNNAMED</argument>
+                                        <!-- run -->
+                                        <argument>dev.viskar.lib.codegen.generator.Generator</argument>
+                                        <argument>--config</argument>
+                                        <argument>${project.basedir}/src/main/generator/generator.conf</argument>
+                                        <argument>--source</argument>
+                                        <argument>${project.basedir}/src/main/generated</argument>
+                                        <argument>--resources</argument>
+                                        <argument>${project.basedir}/src/main/resources</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <!-- Add src/main/generated -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>add-sources</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>src/main/generated</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
