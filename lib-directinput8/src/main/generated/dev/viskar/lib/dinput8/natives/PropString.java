@@ -73,11 +73,11 @@ public class PropString {
     return dinput_h.DIPROPSTRING.sizeof();
   }
 
-  public final MemorySegment getWsz() {
-    return dinput_h.DIPROPSTRING.wsz$slice(self());
-  }
-
   public final MemorySegment getDiph() {
     return dinput_h.DIPROPSTRING.diph$slice(self());
+  }
+
+  public final MemorySegment getWsz() {
+    return dinput_h.DIPROPSTRING.wsz$slice(self());
   }
 }

@@ -109,100 +109,36 @@ public class ColorSet {
     return dinput_h._DICOLORSET.sizeof();
   }
 
-  public final int getCCalloutHighlight(long index) {
-    return dinput_h._DICOLORSET.cCalloutHighlight$get(self(), index);
-  }
-
-  public final int getCCalloutHighlight() {
-    return dinput_h._DICOLORSET.cCalloutHighlight$get(self());
-  }
-
-  public final void setCCalloutHighlight(int x) {
-    dinput_h._DICOLORSET.cCalloutHighlight$set(self(), x);
-  }
-
-  public final void setCCalloutHighlight(long index, int x) {
-    dinput_h._DICOLORSET.cCalloutHighlight$set(self(), index, x);
+  public final int getDwSize(long index) {
+    return dinput_h._DICOLORSET.dwSize$get(self(), index);
   }
 
   public final int getDwSize() {
     return dinput_h._DICOLORSET.dwSize$get(self());
   }
 
-  public final int getDwSize(long index) {
-    return dinput_h._DICOLORSET.dwSize$get(self(), index);
+  public final void setDwSize(long index, int x) {
+    dinput_h._DICOLORSET.dwSize$set(self(), index, x);
   }
 
   public final void setDwSize(int x) {
     dinput_h._DICOLORSET.dwSize$set(self(), x);
   }
 
-  public final void setDwSize(long index, int x) {
-    dinput_h._DICOLORSET.dwSize$set(self(), index, x);
+  public final int getCTextFore() {
+    return dinput_h._DICOLORSET.cTextFore$get(self());
   }
 
   public final int getCTextFore(long index) {
     return dinput_h._DICOLORSET.cTextFore$get(self(), index);
   }
 
-  public final int getCTextFore() {
-    return dinput_h._DICOLORSET.cTextFore$get(self());
+  public final int getCControlFill(long index) {
+    return dinput_h._DICOLORSET.cControlFill$get(self(), index);
   }
 
-  public final int getCCalloutLine(long index) {
-    return dinput_h._DICOLORSET.cCalloutLine$get(self(), index);
-  }
-
-  public final int getCCalloutLine() {
-    return dinput_h._DICOLORSET.cCalloutLine$get(self());
-  }
-
-  public final int getCHighlightFill(long index) {
-    return dinput_h._DICOLORSET.cHighlightFill$get(self(), index);
-  }
-
-  public final int getCHighlightFill() {
-    return dinput_h._DICOLORSET.cHighlightFill$get(self());
-  }
-
-  public final void setCHighlightFill(int x) {
-    dinput_h._DICOLORSET.cHighlightFill$set(self(), x);
-  }
-
-  public final void setCHighlightFill(long index, int x) {
-    dinput_h._DICOLORSET.cHighlightFill$set(self(), index, x);
-  }
-
-  public final int getCBorder(long index) {
-    return dinput_h._DICOLORSET.cBorder$get(self(), index);
-  }
-
-  public final int getCBorder() {
-    return dinput_h._DICOLORSET.cBorder$get(self());
-  }
-
-  public final int getCTextHighlight() {
-    return dinput_h._DICOLORSET.cTextHighlight$get(self());
-  }
-
-  public final int getCTextHighlight(long index) {
-    return dinput_h._DICOLORSET.cTextHighlight$get(self(), index);
-  }
-
-  public final void setCCalloutLine(int x) {
-    dinput_h._DICOLORSET.cCalloutLine$set(self(), x);
-  }
-
-  public final void setCCalloutLine(long index, int x) {
-    dinput_h._DICOLORSET.cCalloutLine$set(self(), index, x);
-  }
-
-  public final void setCBorder(long index, int x) {
-    dinput_h._DICOLORSET.cBorder$set(self(), index, x);
-  }
-
-  public final void setCBorder(int x) {
-    dinput_h._DICOLORSET.cBorder$set(self(), x);
+  public final int getCControlFill() {
+    return dinput_h._DICOLORSET.cControlFill$get(self());
   }
 
   public final void setCControlFill(long index, int x) {
@@ -213,36 +149,84 @@ public class ColorSet {
     dinput_h._DICOLORSET.cControlFill$set(self(), x);
   }
 
-  public final int getCControlFill() {
-    return dinput_h._DICOLORSET.cControlFill$get(self());
+  public final int getCBorder() {
+    return dinput_h._DICOLORSET.cBorder$get(self());
   }
 
-  public final int getCControlFill(long index) {
-    return dinput_h._DICOLORSET.cControlFill$get(self(), index);
+  public final int getCBorder(long index) {
+    return dinput_h._DICOLORSET.cBorder$get(self(), index);
   }
 
-  public final void setCAreaFill(int x) {
-    dinput_h._DICOLORSET.cAreaFill$set(self(), x);
-  }
-
-  public final void setCAreaFill(long index, int x) {
-    dinput_h._DICOLORSET.cAreaFill$set(self(), index, x);
-  }
-
-  public final void setCTextFore(long index, int x) {
-    dinput_h._DICOLORSET.cTextFore$set(self(), index, x);
-  }
-
-  public final void setCTextFore(int x) {
-    dinput_h._DICOLORSET.cTextFore$set(self(), x);
+  public final void setCTextHighlight(long index, int x) {
+    dinput_h._DICOLORSET.cTextHighlight$set(self(), index, x);
   }
 
   public final void setCTextHighlight(int x) {
     dinput_h._DICOLORSET.cTextHighlight$set(self(), x);
   }
 
-  public final void setCTextHighlight(long index, int x) {
-    dinput_h._DICOLORSET.cTextHighlight$set(self(), index, x);
+  public final int getCTextHighlight() {
+    return dinput_h._DICOLORSET.cTextHighlight$get(self());
+  }
+
+  public final int getCTextHighlight(long index) {
+    return dinput_h._DICOLORSET.cTextHighlight$get(self(), index);
+  }
+
+  public final int getCCalloutLine() {
+    return dinput_h._DICOLORSET.cCalloutLine$get(self());
+  }
+
+  public final int getCCalloutLine(long index) {
+    return dinput_h._DICOLORSET.cCalloutLine$get(self(), index);
+  }
+
+  public final int getCHighlightFill() {
+    return dinput_h._DICOLORSET.cHighlightFill$get(self());
+  }
+
+  public final int getCHighlightFill(long index) {
+    return dinput_h._DICOLORSET.cHighlightFill$get(self(), index);
+  }
+
+  public final void setCTextFore(int x) {
+    dinput_h._DICOLORSET.cTextFore$set(self(), x);
+  }
+
+  public final void setCTextFore(long index, int x) {
+    dinput_h._DICOLORSET.cTextFore$set(self(), index, x);
+  }
+
+  public final void setCBorder(int x) {
+    dinput_h._DICOLORSET.cBorder$set(self(), x);
+  }
+
+  public final void setCBorder(long index, int x) {
+    dinput_h._DICOLORSET.cBorder$set(self(), index, x);
+  }
+
+  public final void setCCalloutLine(int x) {
+    dinput_h._DICOLORSET.cCalloutLine$set(self(), x);
+  }
+
+  public final void setCCalloutLine(long index, int x) {
+    dinput_h._DICOLORSET.cCalloutLine$set(self(), index, x);
+  }
+
+  public final void setCAreaFill(long index, int x) {
+    dinput_h._DICOLORSET.cAreaFill$set(self(), index, x);
+  }
+
+  public final void setCAreaFill(int x) {
+    dinput_h._DICOLORSET.cAreaFill$set(self(), x);
+  }
+
+  public final void setCHighlightFill(int x) {
+    dinput_h._DICOLORSET.cHighlightFill$set(self(), x);
+  }
+
+  public final void setCHighlightFill(long index, int x) {
+    dinput_h._DICOLORSET.cHighlightFill$set(self(), index, x);
   }
 
   public final int getCAreaFill(long index) {
@@ -251,5 +235,21 @@ public class ColorSet {
 
   public final int getCAreaFill() {
     return dinput_h._DICOLORSET.cAreaFill$get(self());
+  }
+
+  public final int getCCalloutHighlight(long index) {
+    return dinput_h._DICOLORSET.cCalloutHighlight$get(self(), index);
+  }
+
+  public final int getCCalloutHighlight() {
+    return dinput_h._DICOLORSET.cCalloutHighlight$get(self());
+  }
+
+  public final void setCCalloutHighlight(long index, int x) {
+    dinput_h._DICOLORSET.cCalloutHighlight$set(self(), index, x);
+  }
+
+  public final void setCCalloutHighlight(int x) {
+    dinput_h._DICOLORSET.cCalloutHighlight$set(self(), x);
   }
 }

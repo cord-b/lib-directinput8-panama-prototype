@@ -80,19 +80,19 @@ public class PropPointer {
     return dinput_h.DIPROPPOINTER.diph$slice(self());
   }
 
-  public final long getUData() {
-    return dinput_h.DIPROPPOINTER.uData$get(self());
-  }
-
-  public final long getUData(long index) {
-    return dinput_h.DIPROPPOINTER.uData$get(self(), index);
-  }
-
   public final void setUData(long index, long x) {
     dinput_h.DIPROPPOINTER.uData$set(self(), index, x);
   }
 
   public final void setUData(long x) {
     dinput_h.DIPROPPOINTER.uData$set(self(), x);
+  }
+
+  public final long getUData() {
+    return dinput_h.DIPROPPOINTER.uData$get(self());
+  }
+
+  public final long getUData(long index) {
+    return dinput_h.DIPROPPOINTER.uData$get(self(), index);
   }
 }

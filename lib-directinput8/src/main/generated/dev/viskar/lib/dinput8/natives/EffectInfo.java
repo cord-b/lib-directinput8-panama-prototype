@@ -93,44 +93,12 @@ public class EffectInfo {
     return dinput_h.DIEFFECTINFOW.sizeof();
   }
 
-  public final void setDwDynamicParams(long index, int x) {
-    dinput_h.DIEFFECTINFOW.dwDynamicParams$set(self(), index, x);
-  }
-
-  public final void setDwDynamicParams(int x) {
-    dinput_h.DIEFFECTINFOW.dwDynamicParams$set(self(), x);
-  }
-
-  public final int getDwDynamicParams(long index) {
-    return dinput_h.DIEFFECTINFOW.dwDynamicParams$get(self(), index);
-  }
-
-  public final int getDwDynamicParams() {
-    return dinput_h.DIEFFECTINFOW.dwDynamicParams$get(self());
-  }
-
-  public final MemorySegment getGuid() {
-    return dinput_h.DIEFFECTINFOW.guid$slice(self());
-  }
-
-  public final void setDwStaticParams(long index, int x) {
-    dinput_h.DIEFFECTINFOW.dwStaticParams$set(self(), index, x);
-  }
-
-  public final void setDwStaticParams(int x) {
-    dinput_h.DIEFFECTINFOW.dwStaticParams$set(self(), x);
-  }
-
   public final int getDwEffType() {
     return dinput_h.DIEFFECTINFOW.dwEffType$get(self());
   }
 
   public final int getDwEffType(long index) {
     return dinput_h.DIEFFECTINFOW.dwEffType$get(self(), index);
-  }
-
-  public final MemorySegment getTszName() {
-    return dinput_h.DIEFFECTINFOW.tszName$slice(self());
   }
 
   public final int getDwSize() {
@@ -141,27 +109,59 @@ public class EffectInfo {
     return dinput_h.DIEFFECTINFOW.dwSize$get(self(), index);
   }
 
-  public final void setDwSize(int x) {
-    dinput_h.DIEFFECTINFOW.dwSize$set(self(), x);
-  }
-
-  public final void setDwSize(long index, int x) {
-    dinput_h.DIEFFECTINFOW.dwSize$set(self(), index, x);
-  }
-
-  public final int getDwStaticParams(long index) {
-    return dinput_h.DIEFFECTINFOW.dwStaticParams$get(self(), index);
-  }
-
-  public final int getDwStaticParams() {
-    return dinput_h.DIEFFECTINFOW.dwStaticParams$get(self());
+  public final void setDwEffType(long index, int x) {
+    dinput_h.DIEFFECTINFOW.dwEffType$set(self(), index, x);
   }
 
   public final void setDwEffType(int x) {
     dinput_h.DIEFFECTINFOW.dwEffType$set(self(), x);
   }
 
-  public final void setDwEffType(long index, int x) {
-    dinput_h.DIEFFECTINFOW.dwEffType$set(self(), index, x);
+  public final MemorySegment getGuid() {
+    return dinput_h.DIEFFECTINFOW.guid$slice(self());
+  }
+
+  public final MemorySegment getTszName() {
+    return dinput_h.DIEFFECTINFOW.tszName$slice(self());
+  }
+
+  public final int getDwStaticParams() {
+    return dinput_h.DIEFFECTINFOW.dwStaticParams$get(self());
+  }
+
+  public final int getDwStaticParams(long index) {
+    return dinput_h.DIEFFECTINFOW.dwStaticParams$get(self(), index);
+  }
+
+  public final void setDwStaticParams(long index, int x) {
+    dinput_h.DIEFFECTINFOW.dwStaticParams$set(self(), index, x);
+  }
+
+  public final void setDwStaticParams(int x) {
+    dinput_h.DIEFFECTINFOW.dwStaticParams$set(self(), x);
+  }
+
+  public final void setDwSize(long index, int x) {
+    dinput_h.DIEFFECTINFOW.dwSize$set(self(), index, x);
+  }
+
+  public final void setDwSize(int x) {
+    dinput_h.DIEFFECTINFOW.dwSize$set(self(), x);
+  }
+
+  public final void setDwDynamicParams(int x) {
+    dinput_h.DIEFFECTINFOW.dwDynamicParams$set(self(), x);
+  }
+
+  public final void setDwDynamicParams(long index, int x) {
+    dinput_h.DIEFFECTINFOW.dwDynamicParams$set(self(), index, x);
+  }
+
+  public final int getDwDynamicParams(long index) {
+    return dinput_h.DIEFFECTINFOW.dwDynamicParams$get(self(), index);
+  }
+
+  public final int getDwDynamicParams() {
+    return dinput_h.DIEFFECTINFOW.dwDynamicParams$get(self());
   }
 }

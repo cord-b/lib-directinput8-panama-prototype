@@ -84,28 +84,20 @@ public class DeviceObjectData_DX3 {
     return dinput_h.DIDEVICEOBJECTDATA_DX3.sizeof();
   }
 
-  public final void setDwOfs(long index, int x) {
-    dinput_h.DIDEVICEOBJECTDATA_DX3.dwOfs$set(self(), index, x);
-  }
-
-  public final void setDwOfs(int x) {
-    dinput_h.DIDEVICEOBJECTDATA_DX3.dwOfs$set(self(), x);
-  }
-
-  public final void setDwData(long index, int x) {
-    dinput_h.DIDEVICEOBJECTDATA_DX3.dwData$set(self(), index, x);
-  }
-
-  public final void setDwData(int x) {
-    dinput_h.DIDEVICEOBJECTDATA_DX3.dwData$set(self(), x);
-  }
-
   public final int getDwOfs() {
     return dinput_h.DIDEVICEOBJECTDATA_DX3.dwOfs$get(self());
   }
 
   public final int getDwOfs(long index) {
     return dinput_h.DIDEVICEOBJECTDATA_DX3.dwOfs$get(self(), index);
+  }
+
+  public final void setDwOfs(long index, int x) {
+    dinput_h.DIDEVICEOBJECTDATA_DX3.dwOfs$set(self(), index, x);
+  }
+
+  public final void setDwOfs(int x) {
+    dinput_h.DIDEVICEOBJECTDATA_DX3.dwOfs$set(self(), x);
   }
 
   public final void setDwTimeStamp(int x) {
@@ -116,20 +108,20 @@ public class DeviceObjectData_DX3 {
     dinput_h.DIDEVICEOBJECTDATA_DX3.dwTimeStamp$set(self(), index, x);
   }
 
-  public final void setDwSequence(long index, int x) {
-    dinput_h.DIDEVICEOBJECTDATA_DX3.dwSequence$set(self(), index, x);
-  }
-
-  public final void setDwSequence(int x) {
-    dinput_h.DIDEVICEOBJECTDATA_DX3.dwSequence$set(self(), x);
+  public final int getDwTimeStamp(long index) {
+    return dinput_h.DIDEVICEOBJECTDATA_DX3.dwTimeStamp$get(self(), index);
   }
 
   public final int getDwTimeStamp() {
     return dinput_h.DIDEVICEOBJECTDATA_DX3.dwTimeStamp$get(self());
   }
 
-  public final int getDwTimeStamp(long index) {
-    return dinput_h.DIDEVICEOBJECTDATA_DX3.dwTimeStamp$get(self(), index);
+  public final void setDwData(long index, int x) {
+    dinput_h.DIDEVICEOBJECTDATA_DX3.dwData$set(self(), index, x);
+  }
+
+  public final void setDwData(int x) {
+    dinput_h.DIDEVICEOBJECTDATA_DX3.dwData$set(self(), x);
   }
 
   public final int getDwSequence() {
@@ -146,5 +138,13 @@ public class DeviceObjectData_DX3 {
 
   public final int getDwData(long index) {
     return dinput_h.DIDEVICEOBJECTDATA_DX3.dwData$get(self(), index);
+  }
+
+  public final void setDwSequence(long index, int x) {
+    dinput_h.DIDEVICEOBJECTDATA_DX3.dwSequence$set(self(), index, x);
+  }
+
+  public final void setDwSequence(int x) {
+    dinput_h.DIDEVICEOBJECTDATA_DX3.dwSequence$set(self(), x);
   }
 }

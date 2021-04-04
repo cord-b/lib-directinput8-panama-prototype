@@ -119,84 +119,28 @@ public class DevCaps {
     return dinput_h.DIDEVCAPS.sizeof();
   }
 
-  public final int getDwHardwareRevision(long index) {
-    return dinput_h.DIDEVCAPS.dwHardwareRevision$get(self(), index);
+  public final int getDwSize(long index) {
+    return dinput_h.DIDEVCAPS.dwSize$get(self(), index);
   }
 
-  public final int getDwHardwareRevision() {
-    return dinput_h.DIDEVCAPS.dwHardwareRevision$get(self());
+  public final int getDwSize() {
+    return dinput_h.DIDEVCAPS.dwSize$get(self());
   }
 
-  public final int getDwFFMinTimeResolution(long index) {
-    return dinput_h.DIDEVCAPS.dwFFMinTimeResolution$get(self(), index);
+  public final void setDwSize(int x) {
+    dinput_h.DIDEVCAPS.dwSize$set(self(), x);
   }
 
-  public final int getDwFFMinTimeResolution() {
-    return dinput_h.DIDEVCAPS.dwFFMinTimeResolution$get(self());
+  public final void setDwSize(long index, int x) {
+    dinput_h.DIDEVCAPS.dwSize$set(self(), index, x);
   }
 
-  public final int getDwFFSamplePeriod() {
-    return dinput_h.DIDEVCAPS.dwFFSamplePeriod$get(self());
+  public final void setDwDevType(long index, int x) {
+    dinput_h.DIDEVCAPS.dwDevType$set(self(), index, x);
   }
 
-  public final int getDwFFSamplePeriod(long index) {
-    return dinput_h.DIDEVCAPS.dwFFSamplePeriod$get(self(), index);
-  }
-
-  public final void setDwFirmwareRevision(int x) {
-    dinput_h.DIDEVCAPS.dwFirmwareRevision$set(self(), x);
-  }
-
-  public final void setDwFirmwareRevision(long index, int x) {
-    dinput_h.DIDEVCAPS.dwFirmwareRevision$set(self(), index, x);
-  }
-
-  public final void setDwHardwareRevision(long index, int x) {
-    dinput_h.DIDEVCAPS.dwHardwareRevision$set(self(), index, x);
-  }
-
-  public final void setDwHardwareRevision(int x) {
-    dinput_h.DIDEVCAPS.dwHardwareRevision$set(self(), x);
-  }
-
-  public final void setDwFFMinTimeResolution(long index, int x) {
-    dinput_h.DIDEVCAPS.dwFFMinTimeResolution$set(self(), index, x);
-  }
-
-  public final void setDwFFMinTimeResolution(int x) {
-    dinput_h.DIDEVCAPS.dwFFMinTimeResolution$set(self(), x);
-  }
-
-  public final void setDwFFDriverVersion(int x) {
-    dinput_h.DIDEVCAPS.dwFFDriverVersion$set(self(), x);
-  }
-
-  public final void setDwFFDriverVersion(long index, int x) {
-    dinput_h.DIDEVCAPS.dwFFDriverVersion$set(self(), index, x);
-  }
-
-  public final void setDwFFSamplePeriod(int x) {
-    dinput_h.DIDEVCAPS.dwFFSamplePeriod$set(self(), x);
-  }
-
-  public final void setDwFFSamplePeriod(long index, int x) {
-    dinput_h.DIDEVCAPS.dwFFSamplePeriod$set(self(), index, x);
-  }
-
-  public final int getDwFFDriverVersion() {
-    return dinput_h.DIDEVCAPS.dwFFDriverVersion$get(self());
-  }
-
-  public final int getDwFFDriverVersion(long index) {
-    return dinput_h.DIDEVCAPS.dwFFDriverVersion$get(self(), index);
-  }
-
-  public final int getDwFirmwareRevision() {
-    return dinput_h.DIDEVCAPS.dwFirmwareRevision$get(self());
-  }
-
-  public final int getDwFirmwareRevision(long index) {
-    return dinput_h.DIDEVCAPS.dwFirmwareRevision$get(self(), index);
+  public final void setDwDevType(int x) {
+    dinput_h.DIDEVCAPS.dwDevType$set(self(), x);
   }
 
   public final int getDwDevType(long index) {
@@ -207,44 +151,100 @@ public class DevCaps {
     return dinput_h.DIDEVCAPS.dwDevType$get(self());
   }
 
-  public final int getDwSize(long index) {
-    return dinput_h.DIDEVCAPS.dwSize$get(self(), index);
-  }
-
-  public final int getDwSize() {
-    return dinput_h.DIDEVCAPS.dwSize$get(self());
-  }
-
-  public final void setDwSize(long index, int x) {
-    dinput_h.DIDEVCAPS.dwSize$set(self(), index, x);
-  }
-
-  public final void setDwSize(int x) {
-    dinput_h.DIDEVCAPS.dwSize$set(self(), x);
-  }
-
-  public final void setDwDevType(int x) {
-    dinput_h.DIDEVCAPS.dwDevType$set(self(), x);
-  }
-
-  public final void setDwDevType(long index, int x) {
-    dinput_h.DIDEVCAPS.dwDevType$set(self(), index, x);
-  }
-
-  public final int getDwFlags() {
-    return dinput_h.DIDEVCAPS.dwFlags$get(self());
-  }
-
-  public final int getDwFlags(long index) {
-    return dinput_h.DIDEVCAPS.dwFlags$get(self(), index);
+  public final void setDwFlags(int x) {
+    dinput_h.DIDEVCAPS.dwFlags$set(self(), x);
   }
 
   public final void setDwFlags(long index, int x) {
     dinput_h.DIDEVCAPS.dwFlags$set(self(), index, x);
   }
 
-  public final void setDwFlags(int x) {
-    dinput_h.DIDEVCAPS.dwFlags$set(self(), x);
+  public final int getDwFlags(long index) {
+    return dinput_h.DIDEVCAPS.dwFlags$get(self(), index);
+  }
+
+  public final int getDwFlags() {
+    return dinput_h.DIDEVCAPS.dwFlags$get(self());
+  }
+
+  public final void setDwFirmwareRevision(long index, int x) {
+    dinput_h.DIDEVCAPS.dwFirmwareRevision$set(self(), index, x);
+  }
+
+  public final void setDwFirmwareRevision(int x) {
+    dinput_h.DIDEVCAPS.dwFirmwareRevision$set(self(), x);
+  }
+
+  public final int getDwHardwareRevision(long index) {
+    return dinput_h.DIDEVCAPS.dwHardwareRevision$get(self(), index);
+  }
+
+  public final int getDwHardwareRevision() {
+    return dinput_h.DIDEVCAPS.dwHardwareRevision$get(self());
+  }
+
+  public final int getDwFirmwareRevision() {
+    return dinput_h.DIDEVCAPS.dwFirmwareRevision$get(self());
+  }
+
+  public final int getDwFirmwareRevision(long index) {
+    return dinput_h.DIDEVCAPS.dwFirmwareRevision$get(self(), index);
+  }
+
+  public final void setDwFFSamplePeriod(long index, int x) {
+    dinput_h.DIDEVCAPS.dwFFSamplePeriod$set(self(), index, x);
+  }
+
+  public final void setDwFFSamplePeriod(int x) {
+    dinput_h.DIDEVCAPS.dwFFSamplePeriod$set(self(), x);
+  }
+
+  public final void setDwFFMinTimeResolution(long index, int x) {
+    dinput_h.DIDEVCAPS.dwFFMinTimeResolution$set(self(), index, x);
+  }
+
+  public final void setDwFFMinTimeResolution(int x) {
+    dinput_h.DIDEVCAPS.dwFFMinTimeResolution$set(self(), x);
+  }
+
+  public final int getDwFFMinTimeResolution(long index) {
+    return dinput_h.DIDEVCAPS.dwFFMinTimeResolution$get(self(), index);
+  }
+
+  public final int getDwFFMinTimeResolution() {
+    return dinput_h.DIDEVCAPS.dwFFMinTimeResolution$get(self());
+  }
+
+  public final void setDwFFDriverVersion(int x) {
+    dinput_h.DIDEVCAPS.dwFFDriverVersion$set(self(), x);
+  }
+
+  public final void setDwFFDriverVersion(long index, int x) {
+    dinput_h.DIDEVCAPS.dwFFDriverVersion$set(self(), index, x);
+  }
+
+  public final int getDwFFSamplePeriod() {
+    return dinput_h.DIDEVCAPS.dwFFSamplePeriod$get(self());
+  }
+
+  public final int getDwFFSamplePeriod(long index) {
+    return dinput_h.DIDEVCAPS.dwFFSamplePeriod$get(self(), index);
+  }
+
+  public final void setDwHardwareRevision(long index, int x) {
+    dinput_h.DIDEVCAPS.dwHardwareRevision$set(self(), index, x);
+  }
+
+  public final void setDwHardwareRevision(int x) {
+    dinput_h.DIDEVCAPS.dwHardwareRevision$set(self(), x);
+  }
+
+  public final int getDwFFDriverVersion() {
+    return dinput_h.DIDEVCAPS.dwFFDriverVersion$get(self());
+  }
+
+  public final int getDwFFDriverVersion(long index) {
+    return dinput_h.DIDEVCAPS.dwFFDriverVersion$get(self(), index);
   }
 
   public final int getDwAxes() {
@@ -263,20 +263,12 @@ public class DevCaps {
     dinput_h.DIDEVCAPS.dwAxes$set(self(), index, x);
   }
 
-  public final int getDwButtons() {
-    return dinput_h.DIDEVCAPS.dwButtons$get(self());
+  public final int getDwPOVs(long index) {
+    return dinput_h.DIDEVCAPS.dwPOVs$get(self(), index);
   }
 
-  public final int getDwButtons(long index) {
-    return dinput_h.DIDEVCAPS.dwButtons$get(self(), index);
-  }
-
-  public final void setDwButtons(long index, int x) {
-    dinput_h.DIDEVCAPS.dwButtons$set(self(), index, x);
-  }
-
-  public final void setDwButtons(int x) {
-    dinput_h.DIDEVCAPS.dwButtons$set(self(), x);
+  public final int getDwPOVs() {
+    return dinput_h.DIDEVCAPS.dwPOVs$get(self());
   }
 
   public final void setDwPOVs(int x) {
@@ -287,11 +279,19 @@ public class DevCaps {
     dinput_h.DIDEVCAPS.dwPOVs$set(self(), index, x);
   }
 
-  public final int getDwPOVs() {
-    return dinput_h.DIDEVCAPS.dwPOVs$get(self());
+  public final void setDwButtons(int x) {
+    dinput_h.DIDEVCAPS.dwButtons$set(self(), x);
   }
 
-  public final int getDwPOVs(long index) {
-    return dinput_h.DIDEVCAPS.dwPOVs$get(self(), index);
+  public final void setDwButtons(long index, int x) {
+    dinput_h.DIDEVCAPS.dwButtons$set(self(), index, x);
+  }
+
+  public final int getDwButtons(long index) {
+    return dinput_h.DIDEVCAPS.dwButtons$get(self(), index);
+  }
+
+  public final int getDwButtons() {
+    return dinput_h.DIDEVCAPS.dwButtons$get(self());
   }
 }

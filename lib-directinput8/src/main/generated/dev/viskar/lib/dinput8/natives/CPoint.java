@@ -74,20 +74,28 @@ public class CPoint {
     return dinput_h._CPOINT.sizeof();
   }
 
-  public final int getLP() {
-    return dinput_h._CPOINT.lP$get(self());
-  }
-
   public final int getLP(long index) {
     return dinput_h._CPOINT.lP$get(self(), index);
   }
 
-  public final int getDwLog(long index) {
-    return dinput_h._CPOINT.dwLog$get(self(), index);
+  public final int getLP() {
+    return dinput_h._CPOINT.lP$get(self());
+  }
+
+  public final void setDwLog(int x) {
+    dinput_h._CPOINT.dwLog$set(self(), x);
+  }
+
+  public final void setDwLog(long index, int x) {
+    dinput_h._CPOINT.dwLog$set(self(), index, x);
   }
 
   public final int getDwLog() {
     return dinput_h._CPOINT.dwLog$get(self());
+  }
+
+  public final int getDwLog(long index) {
+    return dinput_h._CPOINT.dwLog$get(self(), index);
   }
 
   public final void setLP(long index, int x) {
@@ -96,13 +104,5 @@ public class CPoint {
 
   public final void setLP(int x) {
     dinput_h._CPOINT.lP$set(self(), x);
-  }
-
-  public final void setDwLog(long index, int x) {
-    dinput_h._CPOINT.dwLog$set(self(), index, x);
-  }
-
-  public final void setDwLog(int x) {
-    dinput_h._CPOINT.dwLog$set(self(), x);
   }
 }

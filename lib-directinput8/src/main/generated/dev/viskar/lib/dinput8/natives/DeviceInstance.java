@@ -109,72 +109,28 @@ public class DeviceInstance {
     return dinput_h.DIDEVICEINSTANCEW.sizeof();
   }
 
-  public final MemorySegment getTszProductName() {
-    return dinput_h.DIDEVICEINSTANCEW.tszProductName$slice(self());
-  }
-
-  public final MemorySegment getTszInstanceName() {
-    return dinput_h.DIDEVICEINSTANCEW.tszInstanceName$slice(self());
-  }
-
-  public final int getDwDevType(long index) {
-    return dinput_h.DIDEVICEINSTANCEW.dwDevType$get(self(), index);
-  }
-
-  public final int getDwDevType() {
-    return dinput_h.DIDEVICEINSTANCEW.dwDevType$get(self());
-  }
-
-  public final MemorySegment getGuidProduct() {
-    return dinput_h.DIDEVICEINSTANCEW.guidProduct$slice(self());
-  }
-
-  public final MemorySegment getGuidInstance() {
-    return dinput_h.DIDEVICEINSTANCEW.guidInstance$slice(self());
+  public final int getDwSize() {
+    return dinput_h.DIDEVICEINSTANCEW.dwSize$get(self());
   }
 
   public final int getDwSize(long index) {
     return dinput_h.DIDEVICEINSTANCEW.dwSize$get(self(), index);
   }
 
-  public final int getDwSize() {
-    return dinput_h.DIDEVICEINSTANCEW.dwSize$get(self());
+  public final void setDwSize(int x) {
+    dinput_h.DIDEVICEINSTANCEW.dwSize$set(self(), x);
   }
 
   public final void setDwSize(long index, int x) {
     dinput_h.DIDEVICEINSTANCEW.dwSize$set(self(), index, x);
   }
 
-  public final void setDwSize(int x) {
-    dinput_h.DIDEVICEINSTANCEW.dwSize$set(self(), x);
+  public final MemorySegment getGuidInstance() {
+    return dinput_h.DIDEVICEINSTANCEW.guidInstance$slice(self());
   }
 
-  public final short getWUsagePage(long index) {
-    return dinput_h.DIDEVICEINSTANCEW.wUsagePage$get(self(), index);
-  }
-
-  public final short getWUsagePage() {
-    return dinput_h.DIDEVICEINSTANCEW.wUsagePage$get(self());
-  }
-
-  public final short getWUsage(long index) {
-    return dinput_h.DIDEVICEINSTANCEW.wUsage$get(self(), index);
-  }
-
-  public final short getWUsage() {
-    return dinput_h.DIDEVICEINSTANCEW.wUsage$get(self());
-  }
-
-  public final void setDwDevType(long index, int x) {
-    dinput_h.DIDEVICEINSTANCEW.dwDevType$set(self(), index, x);
-  }
-
-  public final void setDwDevType(int x) {
-    dinput_h.DIDEVICEINSTANCEW.dwDevType$set(self(), x);
-  }
-
-  public final MemorySegment getGuidFFDriver() {
-    return dinput_h.DIDEVICEINSTANCEW.guidFFDriver$slice(self());
+  public final MemorySegment getGuidProduct() {
+    return dinput_h.DIDEVICEINSTANCEW.guidProduct$slice(self());
   }
 
   public final void setWUsage(long index, short x) {
@@ -191,5 +147,49 @@ public class DeviceInstance {
 
   public final void setWUsagePage(short x) {
     dinput_h.DIDEVICEINSTANCEW.wUsagePage$set(self(), x);
+  }
+
+  public final MemorySegment getGuidFFDriver() {
+    return dinput_h.DIDEVICEINSTANCEW.guidFFDriver$slice(self());
+  }
+
+  public final void setDwDevType(long index, int x) {
+    dinput_h.DIDEVICEINSTANCEW.dwDevType$set(self(), index, x);
+  }
+
+  public final void setDwDevType(int x) {
+    dinput_h.DIDEVICEINSTANCEW.dwDevType$set(self(), x);
+  }
+
+  public final short getWUsagePage() {
+    return dinput_h.DIDEVICEINSTANCEW.wUsagePage$get(self());
+  }
+
+  public final short getWUsagePage(long index) {
+    return dinput_h.DIDEVICEINSTANCEW.wUsagePage$get(self(), index);
+  }
+
+  public final short getWUsage() {
+    return dinput_h.DIDEVICEINSTANCEW.wUsage$get(self());
+  }
+
+  public final short getWUsage(long index) {
+    return dinput_h.DIDEVICEINSTANCEW.wUsage$get(self(), index);
+  }
+
+  public final int getDwDevType() {
+    return dinput_h.DIDEVICEINSTANCEW.dwDevType$get(self());
+  }
+
+  public final int getDwDevType(long index) {
+    return dinput_h.DIDEVICEINSTANCEW.dwDevType$get(self(), index);
+  }
+
+  public final MemorySegment getTszInstanceName() {
+    return dinput_h.DIDEVICEINSTANCEW.tszInstanceName$slice(self());
+  }
+
+  public final MemorySegment getTszProductName() {
+    return dinput_h.DIDEVICEINSTANCEW.tszProductName$slice(self());
   }
 }

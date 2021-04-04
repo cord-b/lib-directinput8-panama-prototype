@@ -110,30 +110,6 @@ public class EffEscape {
     dinput_h.DIEFFESCAPE.dwSize$set(self(), index, x);
   }
 
-  public final void setCbInBuffer(long index, int x) {
-    dinput_h.DIEFFESCAPE.cbInBuffer$set(self(), index, x);
-  }
-
-  public final void setCbInBuffer(int x) {
-    dinput_h.DIEFFESCAPE.cbInBuffer$set(self(), x);
-  }
-
-  public final void setCbOutBuffer(int x) {
-    dinput_h.DIEFFESCAPE.cbOutBuffer$set(self(), x);
-  }
-
-  public final void setCbOutBuffer(long index, int x) {
-    dinput_h.DIEFFESCAPE.cbOutBuffer$set(self(), index, x);
-  }
-
-  public final void setLpvOutBuffer(MemoryAddress x) {
-    dinput_h.DIEFFESCAPE.lpvOutBuffer$set(self(), x);
-  }
-
-  public final void setLpvOutBuffer(long index, MemoryAddress x) {
-    dinput_h.DIEFFESCAPE.lpvOutBuffer$set(self(), index, x);
-  }
-
   public final int getDwCommand(long index) {
     return dinput_h.DIEFFESCAPE.dwCommand$get(self(), index);
   }
@@ -142,12 +118,12 @@ public class EffEscape {
     return dinput_h.DIEFFESCAPE.dwCommand$get(self());
   }
 
-  public final void setDwCommand(long index, int x) {
-    dinput_h.DIEFFESCAPE.dwCommand$set(self(), index, x);
-  }
-
   public final void setDwCommand(int x) {
     dinput_h.DIEFFESCAPE.dwCommand$set(self(), x);
+  }
+
+  public final void setDwCommand(long index, int x) {
+    dinput_h.DIEFFESCAPE.dwCommand$set(self(), index, x);
   }
 
   public final MemoryAddress getLpvInBuffer() {
@@ -158,35 +134,59 @@ public class EffEscape {
     return dinput_h.DIEFFESCAPE.lpvInBuffer$get(self(), index);
   }
 
-  public final int getCbInBuffer() {
-    return dinput_h.DIEFFESCAPE.cbInBuffer$get(self());
-  }
-
-  public final int getCbInBuffer(long index) {
-    return dinput_h.DIEFFESCAPE.cbInBuffer$get(self(), index);
-  }
-
-  public final void setLpvInBuffer(long index, MemoryAddress x) {
-    dinput_h.DIEFFESCAPE.lpvInBuffer$set(self(), index, x);
-  }
-
-  public final void setLpvInBuffer(MemoryAddress x) {
-    dinput_h.DIEFFESCAPE.lpvInBuffer$set(self(), x);
-  }
-
-  public final MemoryAddress getLpvOutBuffer() {
-    return dinput_h.DIEFFESCAPE.lpvOutBuffer$get(self());
-  }
-
-  public final MemoryAddress getLpvOutBuffer(long index) {
-    return dinput_h.DIEFFESCAPE.lpvOutBuffer$get(self(), index);
-  }
-
   public final int getCbOutBuffer() {
     return dinput_h.DIEFFESCAPE.cbOutBuffer$get(self());
   }
 
   public final int getCbOutBuffer(long index) {
     return dinput_h.DIEFFESCAPE.cbOutBuffer$get(self(), index);
+  }
+
+  public final void setLpvInBuffer(MemoryAddress x) {
+    dinput_h.DIEFFESCAPE.lpvInBuffer$set(self(), x);
+  }
+
+  public final void setLpvInBuffer(long index, MemoryAddress x) {
+    dinput_h.DIEFFESCAPE.lpvInBuffer$set(self(), index, x);
+  }
+
+  public final int getCbInBuffer(long index) {
+    return dinput_h.DIEFFESCAPE.cbInBuffer$get(self(), index);
+  }
+
+  public final int getCbInBuffer() {
+    return dinput_h.DIEFFESCAPE.cbInBuffer$get(self());
+  }
+
+  public final void setCbOutBuffer(int x) {
+    dinput_h.DIEFFESCAPE.cbOutBuffer$set(self(), x);
+  }
+
+  public final void setCbOutBuffer(long index, int x) {
+    dinput_h.DIEFFESCAPE.cbOutBuffer$set(self(), index, x);
+  }
+
+  public final void setLpvOutBuffer(long index, MemoryAddress x) {
+    dinput_h.DIEFFESCAPE.lpvOutBuffer$set(self(), index, x);
+  }
+
+  public final void setLpvOutBuffer(MemoryAddress x) {
+    dinput_h.DIEFFESCAPE.lpvOutBuffer$set(self(), x);
+  }
+
+  public final void setCbInBuffer(long index, int x) {
+    dinput_h.DIEFFESCAPE.cbInBuffer$set(self(), index, x);
+  }
+
+  public final void setCbInBuffer(int x) {
+    dinput_h.DIEFFESCAPE.cbInBuffer$set(self(), x);
+  }
+
+  public final MemoryAddress getLpvOutBuffer(long index) {
+    return dinput_h.DIEFFESCAPE.lpvOutBuffer$get(self(), index);
+  }
+
+  public final MemoryAddress getLpvOutBuffer() {
+    return dinput_h.DIEFFESCAPE.lpvOutBuffer$get(self());
   }
 }

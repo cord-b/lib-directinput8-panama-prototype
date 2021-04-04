@@ -89,12 +89,12 @@ public class DeviceObjectData {
     return dinput_h.DIDEVICEOBJECTDATA.sizeof();
   }
 
-  public final long getUAppData(long index) {
-    return dinput_h.DIDEVICEOBJECTDATA.uAppData$get(self(), index);
+  public final int getDwOfs(long index) {
+    return dinput_h.DIDEVICEOBJECTDATA.dwOfs$get(self(), index);
   }
 
-  public final long getUAppData() {
-    return dinput_h.DIDEVICEOBJECTDATA.uAppData$get(self());
+  public final int getDwOfs() {
+    return dinput_h.DIDEVICEOBJECTDATA.dwOfs$get(self());
   }
 
   public final void setDwOfs(int x) {
@@ -105,36 +105,28 @@ public class DeviceObjectData {
     dinput_h.DIDEVICEOBJECTDATA.dwOfs$set(self(), index, x);
   }
 
-  public final void setDwData(int x) {
-    dinput_h.DIDEVICEOBJECTDATA.dwData$set(self(), x);
-  }
-
-  public final void setDwData(long index, int x) {
-    dinput_h.DIDEVICEOBJECTDATA.dwData$set(self(), index, x);
-  }
-
-  public final int getDwOfs(long index) {
-    return dinput_h.DIDEVICEOBJECTDATA.dwOfs$get(self(), index);
-  }
-
-  public final int getDwOfs() {
-    return dinput_h.DIDEVICEOBJECTDATA.dwOfs$get(self());
+  public final void setDwTimeStamp(long index, int x) {
+    dinput_h.DIDEVICEOBJECTDATA.dwTimeStamp$set(self(), index, x);
   }
 
   public final void setDwTimeStamp(int x) {
     dinput_h.DIDEVICEOBJECTDATA.dwTimeStamp$set(self(), x);
   }
 
-  public final void setDwTimeStamp(long index, int x) {
-    dinput_h.DIDEVICEOBJECTDATA.dwTimeStamp$set(self(), index, x);
+  public final void setUAppData(long index, long x) {
+    dinput_h.DIDEVICEOBJECTDATA.uAppData$set(self(), index, x);
   }
 
-  public final void setDwSequence(int x) {
-    dinput_h.DIDEVICEOBJECTDATA.dwSequence$set(self(), x);
+  public final void setUAppData(long x) {
+    dinput_h.DIDEVICEOBJECTDATA.uAppData$set(self(), x);
   }
 
-  public final void setDwSequence(long index, int x) {
-    dinput_h.DIDEVICEOBJECTDATA.dwSequence$set(self(), index, x);
+  public final long getUAppData(long index) {
+    return dinput_h.DIDEVICEOBJECTDATA.uAppData$get(self(), index);
+  }
+
+  public final long getUAppData() {
+    return dinput_h.DIDEVICEOBJECTDATA.uAppData$get(self());
   }
 
   public final int getDwTimeStamp(long index) {
@@ -145,6 +137,14 @@ public class DeviceObjectData {
     return dinput_h.DIDEVICEOBJECTDATA.dwTimeStamp$get(self());
   }
 
+  public final void setDwData(long index, int x) {
+    dinput_h.DIDEVICEOBJECTDATA.dwData$set(self(), index, x);
+  }
+
+  public final void setDwData(int x) {
+    dinput_h.DIDEVICEOBJECTDATA.dwData$set(self(), x);
+  }
+
   public final int getDwSequence(long index) {
     return dinput_h.DIDEVICEOBJECTDATA.dwSequence$get(self(), index);
   }
@@ -153,19 +153,19 @@ public class DeviceObjectData {
     return dinput_h.DIDEVICEOBJECTDATA.dwSequence$get(self());
   }
 
-  public final int getDwData() {
-    return dinput_h.DIDEVICEOBJECTDATA.dwData$get(self());
-  }
-
   public final int getDwData(long index) {
     return dinput_h.DIDEVICEOBJECTDATA.dwData$get(self(), index);
   }
 
-  public final void setUAppData(long x) {
-    dinput_h.DIDEVICEOBJECTDATA.uAppData$set(self(), x);
+  public final int getDwData() {
+    return dinput_h.DIDEVICEOBJECTDATA.dwData$get(self());
   }
 
-  public final void setUAppData(long index, long x) {
-    dinput_h.DIDEVICEOBJECTDATA.uAppData$set(self(), index, x);
+  public final void setDwSequence(long index, int x) {
+    dinput_h.DIDEVICEOBJECTDATA.dwSequence$set(self(), index, x);
+  }
+
+  public final void setDwSequence(int x) {
+    dinput_h.DIDEVICEOBJECTDATA.dwSequence$set(self(), x);
   }
 }

@@ -105,30 +105,6 @@ public class Envelope {
     dinput_h.DIENVELOPE.dwSize$set(self(), index, x);
   }
 
-  public final void setDwFadeLevel(int x) {
-    dinput_h.DIENVELOPE.dwFadeLevel$set(self(), x);
-  }
-
-  public final void setDwFadeLevel(long index, int x) {
-    dinput_h.DIENVELOPE.dwFadeLevel$set(self(), index, x);
-  }
-
-  public final int getDwFadeLevel() {
-    return dinput_h.DIENVELOPE.dwFadeLevel$get(self());
-  }
-
-  public final int getDwFadeLevel(long index) {
-    return dinput_h.DIENVELOPE.dwFadeLevel$get(self(), index);
-  }
-
-  public final void setDwAttackTime(int x) {
-    dinput_h.DIENVELOPE.dwAttackTime$set(self(), x);
-  }
-
-  public final void setDwAttackTime(long index, int x) {
-    dinput_h.DIENVELOPE.dwAttackTime$set(self(), index, x);
-  }
-
   public final void setDwFadeTime(long index, int x) {
     dinput_h.DIENVELOPE.dwFadeTime$set(self(), index, x);
   }
@@ -137,35 +113,59 @@ public class Envelope {
     dinput_h.DIENVELOPE.dwFadeTime$set(self(), x);
   }
 
-  public final int getDwAttackTime() {
-    return dinput_h.DIENVELOPE.dwAttackTime$get(self());
-  }
-
-  public final int getDwAttackTime(long index) {
-    return dinput_h.DIENVELOPE.dwAttackTime$get(self(), index);
+  public final int getDwAttackLevel(long index) {
+    return dinput_h.DIENVELOPE.dwAttackLevel$get(self(), index);
   }
 
   public final int getDwAttackLevel() {
     return dinput_h.DIENVELOPE.dwAttackLevel$get(self());
   }
 
-  public final int getDwAttackLevel(long index) {
-    return dinput_h.DIENVELOPE.dwAttackLevel$get(self(), index);
+  public final int getDwFadeLevel(long index) {
+    return dinput_h.DIENVELOPE.dwFadeLevel$get(self(), index);
   }
 
-  public final void setDwAttackLevel(int x) {
-    dinput_h.DIENVELOPE.dwAttackLevel$set(self(), x);
+  public final int getDwFadeLevel() {
+    return dinput_h.DIENVELOPE.dwFadeLevel$get(self());
+  }
+
+  public final void setDwFadeLevel(int x) {
+    dinput_h.DIENVELOPE.dwFadeLevel$set(self(), x);
+  }
+
+  public final void setDwFadeLevel(long index, int x) {
+    dinput_h.DIENVELOPE.dwFadeLevel$set(self(), index, x);
   }
 
   public final void setDwAttackLevel(long index, int x) {
     dinput_h.DIENVELOPE.dwAttackLevel$set(self(), index, x);
   }
 
-  public final int getDwFadeTime(long index) {
-    return dinput_h.DIENVELOPE.dwFadeTime$get(self(), index);
+  public final void setDwAttackLevel(int x) {
+    dinput_h.DIENVELOPE.dwAttackLevel$set(self(), x);
+  }
+
+  public final void setDwAttackTime(long index, int x) {
+    dinput_h.DIENVELOPE.dwAttackTime$set(self(), index, x);
+  }
+
+  public final void setDwAttackTime(int x) {
+    dinput_h.DIENVELOPE.dwAttackTime$set(self(), x);
   }
 
   public final int getDwFadeTime() {
     return dinput_h.DIENVELOPE.dwFadeTime$get(self());
+  }
+
+  public final int getDwFadeTime(long index) {
+    return dinput_h.DIENVELOPE.dwFadeTime$get(self(), index);
+  }
+
+  public final int getDwAttackTime() {
+    return dinput_h.DIENVELOPE.dwAttackTime$get(self());
+  }
+
+  public final int getDwAttackTime(long index) {
+    return dinput_h.DIENVELOPE.dwAttackTime$get(self(), index);
   }
 }

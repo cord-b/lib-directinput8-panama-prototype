@@ -139,12 +139,12 @@ public class IDirectInputEffect {
     return dinput_h.IDirectInputEffect.sizeof();
   }
 
-  public final void setLpVtbl(MemoryAddress x) {
-    dinput_h.IDirectInputEffect.lpVtbl$set(self(), x);
-  }
-
   public final void setLpVtbl(long index, MemoryAddress x) {
     dinput_h.IDirectInputEffect.lpVtbl$set(self(), index, x);
+  }
+
+  public final void setLpVtbl(MemoryAddress x) {
+    dinput_h.IDirectInputEffect.lpVtbl$set(self(), x);
   }
 
   public final MemoryAddress getLpVtbl(long index) {

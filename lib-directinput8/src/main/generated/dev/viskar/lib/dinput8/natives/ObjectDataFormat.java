@@ -84,44 +84,20 @@ public class ObjectDataFormat {
     return dinput_h._DIOBJECTDATAFORMAT.sizeof();
   }
 
-  public final void setDwOfs(long index, int x) {
-    dinput_h._DIOBJECTDATAFORMAT.dwOfs$set(self(), index, x);
-  }
-
-  public final void setDwOfs(int x) {
-    dinput_h._DIOBJECTDATAFORMAT.dwOfs$set(self(), x);
+  public final int getDwOfs(long index) {
+    return dinput_h._DIOBJECTDATAFORMAT.dwOfs$get(self(), index);
   }
 
   public final int getDwOfs() {
     return dinput_h._DIOBJECTDATAFORMAT.dwOfs$get(self());
   }
 
-  public final int getDwOfs(long index) {
-    return dinput_h._DIOBJECTDATAFORMAT.dwOfs$get(self(), index);
+  public final void setDwOfs(int x) {
+    dinput_h._DIOBJECTDATAFORMAT.dwOfs$set(self(), x);
   }
 
-  public final int getDwType() {
-    return dinput_h._DIOBJECTDATAFORMAT.dwType$get(self());
-  }
-
-  public final int getDwType(long index) {
-    return dinput_h._DIOBJECTDATAFORMAT.dwType$get(self(), index);
-  }
-
-  public final void setDwType(long index, int x) {
-    dinput_h._DIOBJECTDATAFORMAT.dwType$set(self(), index, x);
-  }
-
-  public final void setDwType(int x) {
-    dinput_h._DIOBJECTDATAFORMAT.dwType$set(self(), x);
-  }
-
-  public final int getDwFlags(long index) {
-    return dinput_h._DIOBJECTDATAFORMAT.dwFlags$get(self(), index);
-  }
-
-  public final int getDwFlags() {
-    return dinput_h._DIOBJECTDATAFORMAT.dwFlags$get(self());
+  public final void setDwOfs(long index, int x) {
+    dinput_h._DIOBJECTDATAFORMAT.dwOfs$set(self(), index, x);
   }
 
   public final void setDwFlags(int x) {
@@ -132,6 +108,30 @@ public class ObjectDataFormat {
     dinput_h._DIOBJECTDATAFORMAT.dwFlags$set(self(), index, x);
   }
 
+  public final void setDwType(int x) {
+    dinput_h._DIOBJECTDATAFORMAT.dwType$set(self(), x);
+  }
+
+  public final void setDwType(long index, int x) {
+    dinput_h._DIOBJECTDATAFORMAT.dwType$set(self(), index, x);
+  }
+
+  public final int getDwType(long index) {
+    return dinput_h._DIOBJECTDATAFORMAT.dwType$get(self(), index);
+  }
+
+  public final int getDwType() {
+    return dinput_h._DIOBJECTDATAFORMAT.dwType$get(self());
+  }
+
+  public final int getDwFlags() {
+    return dinput_h._DIOBJECTDATAFORMAT.dwFlags$get(self());
+  }
+
+  public final int getDwFlags(long index) {
+    return dinput_h._DIOBJECTDATAFORMAT.dwFlags$get(self(), index);
+  }
+
   public final void setPguid(MemoryAddress x) {
     dinput_h._DIOBJECTDATAFORMAT.pguid$set(self(), x);
   }
@@ -140,11 +140,11 @@ public class ObjectDataFormat {
     dinput_h._DIOBJECTDATAFORMAT.pguid$set(self(), index, x);
   }
 
-  public final MemoryAddress getPguid() {
-    return dinput_h._DIOBJECTDATAFORMAT.pguid$get(self());
-  }
-
   public final MemoryAddress getPguid(long index) {
     return dinput_h._DIOBJECTDATAFORMAT.pguid$get(self(), index);
+  }
+
+  public final MemoryAddress getPguid() {
+    return dinput_h._DIOBJECTDATAFORMAT.pguid$get(self());
   }
 }

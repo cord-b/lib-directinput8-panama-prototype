@@ -94,20 +94,12 @@ public class DevCaps_DX3 {
     return dinput_h.DIDEVCAPS_DX3.sizeof();
   }
 
-  public final int getDwDevType() {
-    return dinput_h.DIDEVCAPS_DX3.dwDevType$get(self());
-  }
-
-  public final int getDwDevType(long index) {
-    return dinput_h.DIDEVCAPS_DX3.dwDevType$get(self(), index);
+  public final int getDwSize(long index) {
+    return dinput_h.DIDEVCAPS_DX3.dwSize$get(self(), index);
   }
 
   public final int getDwSize() {
     return dinput_h.DIDEVCAPS_DX3.dwSize$get(self());
-  }
-
-  public final int getDwSize(long index) {
-    return dinput_h.DIDEVCAPS_DX3.dwSize$get(self(), index);
   }
 
   public final void setDwSize(int x) {
@@ -126,20 +118,28 @@ public class DevCaps_DX3 {
     dinput_h.DIDEVCAPS_DX3.dwDevType$set(self(), x);
   }
 
-  public final int getDwFlags(long index) {
-    return dinput_h.DIDEVCAPS_DX3.dwFlags$get(self(), index);
+  public final int getDwDevType(long index) {
+    return dinput_h.DIDEVCAPS_DX3.dwDevType$get(self(), index);
   }
 
-  public final int getDwFlags() {
-    return dinput_h.DIDEVCAPS_DX3.dwFlags$get(self());
+  public final int getDwDevType() {
+    return dinput_h.DIDEVCAPS_DX3.dwDevType$get(self());
+  }
+
+  public final void setDwFlags(int x) {
+    dinput_h.DIDEVCAPS_DX3.dwFlags$set(self(), x);
   }
 
   public final void setDwFlags(long index, int x) {
     dinput_h.DIDEVCAPS_DX3.dwFlags$set(self(), index, x);
   }
 
-  public final void setDwFlags(int x) {
-    dinput_h.DIDEVCAPS_DX3.dwFlags$set(self(), x);
+  public final int getDwFlags(long index) {
+    return dinput_h.DIDEVCAPS_DX3.dwFlags$get(self(), index);
+  }
+
+  public final int getDwFlags() {
+    return dinput_h.DIDEVCAPS_DX3.dwFlags$get(self());
   }
 
   public final int getDwAxes(long index) {
@@ -150,28 +150,20 @@ public class DevCaps_DX3 {
     return dinput_h.DIDEVCAPS_DX3.dwAxes$get(self());
   }
 
-  public final void setDwAxes(int x) {
-    dinput_h.DIDEVCAPS_DX3.dwAxes$set(self(), x);
-  }
-
   public final void setDwAxes(long index, int x) {
     dinput_h.DIDEVCAPS_DX3.dwAxes$set(self(), index, x);
   }
 
-  public final int getDwButtons(long index) {
-    return dinput_h.DIDEVCAPS_DX3.dwButtons$get(self(), index);
+  public final void setDwAxes(int x) {
+    dinput_h.DIDEVCAPS_DX3.dwAxes$set(self(), x);
   }
 
-  public final int getDwButtons() {
-    return dinput_h.DIDEVCAPS_DX3.dwButtons$get(self());
+  public final int getDwPOVs(long index) {
+    return dinput_h.DIDEVCAPS_DX3.dwPOVs$get(self(), index);
   }
 
-  public final void setDwButtons(int x) {
-    dinput_h.DIDEVCAPS_DX3.dwButtons$set(self(), x);
-  }
-
-  public final void setDwButtons(long index, int x) {
-    dinput_h.DIDEVCAPS_DX3.dwButtons$set(self(), index, x);
+  public final int getDwPOVs() {
+    return dinput_h.DIDEVCAPS_DX3.dwPOVs$get(self());
   }
 
   public final void setDwPOVs(long index, int x) {
@@ -182,11 +174,19 @@ public class DevCaps_DX3 {
     dinput_h.DIDEVCAPS_DX3.dwPOVs$set(self(), x);
   }
 
-  public final int getDwPOVs() {
-    return dinput_h.DIDEVCAPS_DX3.dwPOVs$get(self());
+  public final void setDwButtons(long index, int x) {
+    dinput_h.DIDEVCAPS_DX3.dwButtons$set(self(), index, x);
   }
 
-  public final int getDwPOVs(long index) {
-    return dinput_h.DIDEVCAPS_DX3.dwPOVs$get(self(), index);
+  public final void setDwButtons(int x) {
+    dinput_h.DIDEVCAPS_DX3.dwButtons$set(self(), x);
+  }
+
+  public final int getDwButtons() {
+    return dinput_h.DIDEVCAPS_DX3.dwButtons$get(self());
+  }
+
+  public final int getDwButtons(long index) {
+    return dinput_h.DIDEVCAPS_DX3.dwButtons$get(self(), index);
   }
 }

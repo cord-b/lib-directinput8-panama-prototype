@@ -93,27 +93,27 @@ public class PropRange {
     return dinput_h.DIPROPRANGE.lMin$get(self(), index);
   }
 
-  public final void setLMin(long index, int x) {
-    dinput_h.DIPROPRANGE.lMin$set(self(), index, x);
-  }
-
-  public final void setLMin(int x) {
-    dinput_h.DIPROPRANGE.lMin$set(self(), x);
-  }
-
-  public final void setLMax(int x) {
-    dinput_h.DIPROPRANGE.lMax$set(self(), x);
-  }
-
-  public final void setLMax(long index, int x) {
-    dinput_h.DIPROPRANGE.lMax$set(self(), index, x);
+  public final int getLMax(long index) {
+    return dinput_h.DIPROPRANGE.lMax$get(self(), index);
   }
 
   public final int getLMax() {
     return dinput_h.DIPROPRANGE.lMax$get(self());
   }
 
-  public final int getLMax(long index) {
-    return dinput_h.DIPROPRANGE.lMax$get(self(), index);
+  public final void setLMax(long index, int x) {
+    dinput_h.DIPROPRANGE.lMax$set(self(), index, x);
+  }
+
+  public final void setLMax(int x) {
+    dinput_h.DIPROPRANGE.lMax$set(self(), x);
+  }
+
+  public final void setLMin(int x) {
+    dinput_h.DIPROPRANGE.lMin$set(self(), x);
+  }
+
+  public final void setLMin(long index, int x) {
+    dinput_h.DIPROPRANGE.lMin$set(self(), index, x);
   }
 }

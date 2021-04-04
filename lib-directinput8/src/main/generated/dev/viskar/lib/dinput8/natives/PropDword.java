@@ -84,15 +84,15 @@ public class PropDword {
     dinput_h.DIPROPDWORD.dwData$set(self(), index, x);
   }
 
+  public final MemorySegment getDiph() {
+    return dinput_h.DIPROPDWORD.diph$slice(self());
+  }
+
   public final int getDwData() {
     return dinput_h.DIPROPDWORD.dwData$get(self());
   }
 
   public final int getDwData(long index) {
     return dinput_h.DIPROPDWORD.dwData$get(self(), index);
-  }
-
-  public final MemorySegment getDiph() {
-    return dinput_h.DIPROPDWORD.diph$slice(self());
   }
 }

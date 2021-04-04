@@ -100,38 +100,6 @@ public class CustomForce {
     return dinput_h.DICUSTOMFORCE.dwSamplePeriod$get(self(), index);
   }
 
-  public final void setCSamples(long index, int x) {
-    dinput_h.DICUSTOMFORCE.cSamples$set(self(), index, x);
-  }
-
-  public final void setCSamples(int x) {
-    dinput_h.DICUSTOMFORCE.cSamples$set(self(), x);
-  }
-
-  public final MemoryAddress getRglForceData() {
-    return dinput_h.DICUSTOMFORCE.rglForceData$get(self());
-  }
-
-  public final MemoryAddress getRglForceData(long index) {
-    return dinput_h.DICUSTOMFORCE.rglForceData$get(self(), index);
-  }
-
-  public final void setRglForceData(long index, MemoryAddress x) {
-    dinput_h.DICUSTOMFORCE.rglForceData$set(self(), index, x);
-  }
-
-  public final void setRglForceData(MemoryAddress x) {
-    dinput_h.DICUSTOMFORCE.rglForceData$set(self(), x);
-  }
-
-  public final void setCChannels(long index, int x) {
-    dinput_h.DICUSTOMFORCE.cChannels$set(self(), index, x);
-  }
-
-  public final void setCChannels(int x) {
-    dinput_h.DICUSTOMFORCE.cChannels$set(self(), x);
-  }
-
   public final int getCChannels(long index) {
     return dinput_h.DICUSTOMFORCE.cChannels$get(self(), index);
   }
@@ -140,11 +108,43 @@ public class CustomForce {
     return dinput_h.DICUSTOMFORCE.cChannels$get(self());
   }
 
-  public final int getCSamples() {
-    return dinput_h.DICUSTOMFORCE.cSamples$get(self());
+  public final void setCChannels(int x) {
+    dinput_h.DICUSTOMFORCE.cChannels$set(self(), x);
+  }
+
+  public final void setCChannels(long index, int x) {
+    dinput_h.DICUSTOMFORCE.cChannels$set(self(), index, x);
+  }
+
+  public final MemoryAddress getRglForceData(long index) {
+    return dinput_h.DICUSTOMFORCE.rglForceData$get(self(), index);
+  }
+
+  public final MemoryAddress getRglForceData() {
+    return dinput_h.DICUSTOMFORCE.rglForceData$get(self());
+  }
+
+  public final void setRglForceData(MemoryAddress x) {
+    dinput_h.DICUSTOMFORCE.rglForceData$set(self(), x);
+  }
+
+  public final void setRglForceData(long index, MemoryAddress x) {
+    dinput_h.DICUSTOMFORCE.rglForceData$set(self(), index, x);
+  }
+
+  public final void setCSamples(int x) {
+    dinput_h.DICUSTOMFORCE.cSamples$set(self(), x);
+  }
+
+  public final void setCSamples(long index, int x) {
+    dinput_h.DICUSTOMFORCE.cSamples$set(self(), index, x);
   }
 
   public final int getCSamples(long index) {
     return dinput_h.DICUSTOMFORCE.cSamples$get(self(), index);
+  }
+
+  public final int getCSamples() {
+    return dinput_h.DICUSTOMFORCE.cSamples$get(self());
   }
 }

@@ -92,44 +92,20 @@ public class PropHeader {
     return dinput_h.DIPROPHEADER.dwSize$get(self());
   }
 
-  public final void setDwSize(int x) {
-    dinput_h.DIPROPHEADER.dwSize$set(self(), x);
-  }
-
   public final void setDwSize(long index, int x) {
     dinput_h.DIPROPHEADER.dwSize$set(self(), index, x);
   }
 
-  public final int getDwHow(long index) {
-    return dinput_h.DIPROPHEADER.dwHow$get(self(), index);
-  }
-
-  public final int getDwHow() {
-    return dinput_h.DIPROPHEADER.dwHow$get(self());
-  }
-
-  public final int getDwHeaderSize(long index) {
-    return dinput_h.DIPROPHEADER.dwHeaderSize$get(self(), index);
+  public final void setDwSize(int x) {
+    dinput_h.DIPROPHEADER.dwSize$set(self(), x);
   }
 
   public final int getDwHeaderSize() {
     return dinput_h.DIPROPHEADER.dwHeaderSize$get(self());
   }
 
-  public final int getDwObj(long index) {
-    return dinput_h.DIPROPHEADER.dwObj$get(self(), index);
-  }
-
-  public final int getDwObj() {
-    return dinput_h.DIPROPHEADER.dwObj$get(self());
-  }
-
-  public final void setDwHow(long index, int x) {
-    dinput_h.DIPROPHEADER.dwHow$set(self(), index, x);
-  }
-
-  public final void setDwHow(int x) {
-    dinput_h.DIPROPHEADER.dwHow$set(self(), x);
+  public final int getDwHeaderSize(long index) {
+    return dinput_h.DIPROPHEADER.dwHeaderSize$get(self(), index);
   }
 
   public final void setDwObj(int x) {
@@ -140,11 +116,35 @@ public class PropHeader {
     dinput_h.DIPROPHEADER.dwObj$set(self(), index, x);
   }
 
+  public final int getDwHow(long index) {
+    return dinput_h.DIPROPHEADER.dwHow$get(self(), index);
+  }
+
+  public final int getDwHow() {
+    return dinput_h.DIPROPHEADER.dwHow$get(self());
+  }
+
+  public final void setDwHow(long index, int x) {
+    dinput_h.DIPROPHEADER.dwHow$set(self(), index, x);
+  }
+
+  public final void setDwHow(int x) {
+    dinput_h.DIPROPHEADER.dwHow$set(self(), x);
+  }
+
   public final void setDwHeaderSize(int x) {
     dinput_h.DIPROPHEADER.dwHeaderSize$set(self(), x);
   }
 
   public final void setDwHeaderSize(long index, int x) {
     dinput_h.DIPROPHEADER.dwHeaderSize$set(self(), index, x);
+  }
+
+  public final int getDwObj(long index) {
+    return dinput_h.DIPROPHEADER.dwObj$get(self(), index);
+  }
+
+  public final int getDwObj() {
+    return dinput_h.DIPROPHEADER.dwObj$get(self());
   }
 }

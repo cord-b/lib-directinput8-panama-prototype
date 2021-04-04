@@ -102,12 +102,20 @@ public class DataFormat {
     return dinput_h._DIDATAFORMAT.dwSize$get(self());
   }
 
+  public final void setDwSize(long index, int x) {
+    dinput_h._DIDATAFORMAT.dwSize$set(self(), index, x);
+  }
+
   public final void setDwSize(int x) {
     dinput_h._DIDATAFORMAT.dwSize$set(self(), x);
   }
 
-  public final void setDwSize(long index, int x) {
-    dinput_h._DIDATAFORMAT.dwSize$set(self(), index, x);
+  public final void setDwFlags(long index, int x) {
+    dinput_h._DIDATAFORMAT.dwFlags$set(self(), index, x);
+  }
+
+  public final void setDwFlags(int x) {
+    dinput_h._DIDATAFORMAT.dwFlags$set(self(), x);
   }
 
   public final int getDwFlags(long index) {
@@ -118,12 +126,12 @@ public class DataFormat {
     return dinput_h._DIDATAFORMAT.dwFlags$get(self());
   }
 
-  public final void setDwFlags(int x) {
-    dinput_h._DIDATAFORMAT.dwFlags$set(self(), x);
+  public final void setDwDataSize(int x) {
+    dinput_h._DIDATAFORMAT.dwDataSize$set(self(), x);
   }
 
-  public final void setDwFlags(long index, int x) {
-    dinput_h._DIDATAFORMAT.dwFlags$set(self(), index, x);
+  public final void setDwDataSize(long index, int x) {
+    dinput_h._DIDATAFORMAT.dwDataSize$set(self(), index, x);
   }
 
   public final int getDwDataSize(long index) {
@@ -134,14 +142,6 @@ public class DataFormat {
     return dinput_h._DIDATAFORMAT.dwDataSize$get(self());
   }
 
-  public final void setDwDataSize(int x) {
-    dinput_h._DIDATAFORMAT.dwDataSize$set(self(), x);
-  }
-
-  public final void setDwDataSize(long index, int x) {
-    dinput_h._DIDATAFORMAT.dwDataSize$set(self(), index, x);
-  }
-
   public final int getDwNumObjs() {
     return dinput_h._DIDATAFORMAT.dwNumObjs$get(self());
   }
@@ -150,12 +150,12 @@ public class DataFormat {
     return dinput_h._DIDATAFORMAT.dwNumObjs$get(self(), index);
   }
 
-  public final void setDwNumObjs(int x) {
-    dinput_h._DIDATAFORMAT.dwNumObjs$set(self(), x);
+  public final void setDwObjSize(long index, int x) {
+    dinput_h._DIDATAFORMAT.dwObjSize$set(self(), index, x);
   }
 
-  public final void setDwNumObjs(long index, int x) {
-    dinput_h._DIDATAFORMAT.dwNumObjs$set(self(), index, x);
+  public final void setDwObjSize(int x) {
+    dinput_h._DIDATAFORMAT.dwObjSize$set(self(), x);
   }
 
   public final int getDwObjSize(long index) {
@@ -166,20 +166,20 @@ public class DataFormat {
     return dinput_h._DIDATAFORMAT.dwObjSize$get(self());
   }
 
-  public final void setDwObjSize(int x) {
-    dinput_h._DIDATAFORMAT.dwObjSize$set(self(), x);
+  public final void setDwNumObjs(int x) {
+    dinput_h._DIDATAFORMAT.dwNumObjs$set(self(), x);
   }
 
-  public final void setDwObjSize(long index, int x) {
-    dinput_h._DIDATAFORMAT.dwObjSize$set(self(), index, x);
-  }
-
-  public final MemoryAddress getRgodf() {
-    return dinput_h._DIDATAFORMAT.rgodf$get(self());
+  public final void setDwNumObjs(long index, int x) {
+    dinput_h._DIDATAFORMAT.dwNumObjs$set(self(), index, x);
   }
 
   public final MemoryAddress getRgodf(long index) {
     return dinput_h._DIDATAFORMAT.rgodf$get(self(), index);
+  }
+
+  public final MemoryAddress getRgodf() {
+    return dinput_h._DIDATAFORMAT.rgodf$get(self());
   }
 
   public final void setRgodf(long index, MemoryAddress x) {

@@ -129,70 +129,6 @@ public class Effect_DX5 {
     return dinput_h.DIEFFECT_DX5.sizeof();
   }
 
-  public final int getCbTypeSpecificParams(long index) {
-    return dinput_h.DIEFFECT_DX5.cbTypeSpecificParams$get(self(), index);
-  }
-
-  public final int getCbTypeSpecificParams() {
-    return dinput_h.DIEFFECT_DX5.cbTypeSpecificParams$get(self());
-  }
-
-  public final void setDwTriggerButton(long index, int x) {
-    dinput_h.DIEFFECT_DX5.dwTriggerButton$set(self(), index, x);
-  }
-
-  public final void setDwTriggerButton(int x) {
-    dinput_h.DIEFFECT_DX5.dwTriggerButton$set(self(), x);
-  }
-
-  public final MemoryAddress getLpvTypeSpecificParams() {
-    return dinput_h.DIEFFECT_DX5.lpvTypeSpecificParams$get(self());
-  }
-
-  public final MemoryAddress getLpvTypeSpecificParams(long index) {
-    return dinput_h.DIEFFECT_DX5.lpvTypeSpecificParams$get(self(), index);
-  }
-
-  public final void setDwTriggerRepeatInterval(int x) {
-    dinput_h.DIEFFECT_DX5.dwTriggerRepeatInterval$set(self(), x);
-  }
-
-  public final void setDwTriggerRepeatInterval(long index, int x) {
-    dinput_h.DIEFFECT_DX5.dwTriggerRepeatInterval$set(self(), index, x);
-  }
-
-  public final int getDwTriggerButton() {
-    return dinput_h.DIEFFECT_DX5.dwTriggerButton$get(self());
-  }
-
-  public final int getDwTriggerButton(long index) {
-    return dinput_h.DIEFFECT_DX5.dwTriggerButton$get(self(), index);
-  }
-
-  public final void setLpvTypeSpecificParams(long index, MemoryAddress x) {
-    dinput_h.DIEFFECT_DX5.lpvTypeSpecificParams$set(self(), index, x);
-  }
-
-  public final void setLpvTypeSpecificParams(MemoryAddress x) {
-    dinput_h.DIEFFECT_DX5.lpvTypeSpecificParams$set(self(), x);
-  }
-
-  public final void setCbTypeSpecificParams(long index, int x) {
-    dinput_h.DIEFFECT_DX5.cbTypeSpecificParams$set(self(), index, x);
-  }
-
-  public final void setCbTypeSpecificParams(int x) {
-    dinput_h.DIEFFECT_DX5.cbTypeSpecificParams$set(self(), x);
-  }
-
-  public final int getDwTriggerRepeatInterval() {
-    return dinput_h.DIEFFECT_DX5.dwTriggerRepeatInterval$get(self());
-  }
-
-  public final int getDwTriggerRepeatInterval(long index) {
-    return dinput_h.DIEFFECT_DX5.dwTriggerRepeatInterval$get(self(), index);
-  }
-
   public final int getDwSize() {
     return dinput_h.DIEFFECT_DX5.dwSize$get(self());
   }
@@ -209,14 +145,6 @@ public class Effect_DX5 {
     dinput_h.DIEFFECT_DX5.dwSize$set(self(), index, x);
   }
 
-  public final int getDwFlags(long index) {
-    return dinput_h.DIEFFECT_DX5.dwFlags$get(self(), index);
-  }
-
-  public final int getDwFlags() {
-    return dinput_h.DIEFFECT_DX5.dwFlags$get(self());
-  }
-
   public final void setDwFlags(int x) {
     dinput_h.DIEFFECT_DX5.dwFlags$set(self(), x);
   }
@@ -225,36 +153,100 @@ public class Effect_DX5 {
     dinput_h.DIEFFECT_DX5.dwFlags$set(self(), index, x);
   }
 
-  public final void setRglDirection(MemoryAddress x) {
-    dinput_h.DIEFFECT_DX5.rglDirection$set(self(), x);
+  public final int getDwFlags() {
+    return dinput_h.DIEFFECT_DX5.dwFlags$get(self());
   }
 
-  public final void setRglDirection(long index, MemoryAddress x) {
-    dinput_h.DIEFFECT_DX5.rglDirection$set(self(), index, x);
+  public final int getDwFlags(long index) {
+    return dinput_h.DIEFFECT_DX5.dwFlags$get(self(), index);
   }
 
-  public final MemoryAddress getLpEnvelope() {
-    return dinput_h.DIEFFECT_DX5.lpEnvelope$get(self());
+  public final int getDwTriggerButton(long index) {
+    return dinput_h.DIEFFECT_DX5.dwTriggerButton$get(self(), index);
   }
 
-  public final MemoryAddress getLpEnvelope(long index) {
-    return dinput_h.DIEFFECT_DX5.lpEnvelope$get(self(), index);
+  public final int getDwTriggerButton() {
+    return dinput_h.DIEFFECT_DX5.dwTriggerButton$get(self());
   }
 
-  public final void setDwGain(int x) {
-    dinput_h.DIEFFECT_DX5.dwGain$set(self(), x);
+  public final int getCbTypeSpecificParams() {
+    return dinput_h.DIEFFECT_DX5.cbTypeSpecificParams$get(self());
+  }
+
+  public final int getCbTypeSpecificParams(long index) {
+    return dinput_h.DIEFFECT_DX5.cbTypeSpecificParams$get(self(), index);
+  }
+
+  public final void setDwTriggerButton(long index, int x) {
+    dinput_h.DIEFFECT_DX5.dwTriggerButton$set(self(), index, x);
+  }
+
+  public final void setDwTriggerButton(int x) {
+    dinput_h.DIEFFECT_DX5.dwTriggerButton$set(self(), x);
+  }
+
+  public final MemoryAddress getLpvTypeSpecificParams(long index) {
+    return dinput_h.DIEFFECT_DX5.lpvTypeSpecificParams$get(self(), index);
+  }
+
+  public final MemoryAddress getLpvTypeSpecificParams() {
+    return dinput_h.DIEFFECT_DX5.lpvTypeSpecificParams$get(self());
+  }
+
+  public final void setDwTriggerRepeatInterval(long index, int x) {
+    dinput_h.DIEFFECT_DX5.dwTriggerRepeatInterval$set(self(), index, x);
+  }
+
+  public final void setDwTriggerRepeatInterval(int x) {
+    dinput_h.DIEFFECT_DX5.dwTriggerRepeatInterval$set(self(), x);
+  }
+
+  public final void setLpvTypeSpecificParams(long index, MemoryAddress x) {
+    dinput_h.DIEFFECT_DX5.lpvTypeSpecificParams$set(self(), index, x);
+  }
+
+  public final void setLpvTypeSpecificParams(MemoryAddress x) {
+    dinput_h.DIEFFECT_DX5.lpvTypeSpecificParams$set(self(), x);
+  }
+
+  public final int getDwTriggerRepeatInterval(long index) {
+    return dinput_h.DIEFFECT_DX5.dwTriggerRepeatInterval$get(self(), index);
+  }
+
+  public final int getDwTriggerRepeatInterval() {
+    return dinput_h.DIEFFECT_DX5.dwTriggerRepeatInterval$get(self());
+  }
+
+  public final void setCbTypeSpecificParams(int x) {
+    dinput_h.DIEFFECT_DX5.cbTypeSpecificParams$set(self(), x);
+  }
+
+  public final void setCbTypeSpecificParams(long index, int x) {
+    dinput_h.DIEFFECT_DX5.cbTypeSpecificParams$set(self(), index, x);
+  }
+
+  public final void setDwSamplePeriod(int x) {
+    dinput_h.DIEFFECT_DX5.dwSamplePeriod$set(self(), x);
+  }
+
+  public final void setDwSamplePeriod(long index, int x) {
+    dinput_h.DIEFFECT_DX5.dwSamplePeriod$set(self(), index, x);
   }
 
   public final void setDwGain(long index, int x) {
     dinput_h.DIEFFECT_DX5.dwGain$set(self(), index, x);
   }
 
-  public final void setLpEnvelope(MemoryAddress x) {
-    dinput_h.DIEFFECT_DX5.lpEnvelope$set(self(), x);
+  public final void setDwGain(int x) {
+    dinput_h.DIEFFECT_DX5.dwGain$set(self(), x);
   }
 
-  public final void setLpEnvelope(long index, MemoryAddress x) {
-    dinput_h.DIEFFECT_DX5.lpEnvelope$set(self(), index, x);
+  public final int getDwGain() {
+    return dinput_h.DIEFFECT_DX5.dwGain$get(self());
+  }
+
+  public final int getDwGain(long index) {
+    return dinput_h.DIEFFECT_DX5.dwGain$get(self(), index);
   }
 
   public final int getDwDuration(long index) {
@@ -265,12 +257,12 @@ public class Effect_DX5 {
     return dinput_h.DIEFFECT_DX5.dwDuration$get(self());
   }
 
-  public final void setDwSamplePeriod(long index, int x) {
-    dinput_h.DIEFFECT_DX5.dwSamplePeriod$set(self(), index, x);
+  public final void setDwDuration(int x) {
+    dinput_h.DIEFFECT_DX5.dwDuration$set(self(), x);
   }
 
-  public final void setDwSamplePeriod(int x) {
-    dinput_h.DIEFFECT_DX5.dwSamplePeriod$set(self(), x);
+  public final void setDwDuration(long index, int x) {
+    dinput_h.DIEFFECT_DX5.dwDuration$set(self(), index, x);
   }
 
   public final int getDwSamplePeriod() {
@@ -281,28 +273,12 @@ public class Effect_DX5 {
     return dinput_h.DIEFFECT_DX5.dwSamplePeriod$get(self(), index);
   }
 
-  public final void setCAxes(long index, int x) {
-    dinput_h.DIEFFECT_DX5.cAxes$set(self(), index, x);
+  public final void setRglDirection(long index, MemoryAddress x) {
+    dinput_h.DIEFFECT_DX5.rglDirection$set(self(), index, x);
   }
 
-  public final void setCAxes(int x) {
-    dinput_h.DIEFFECT_DX5.cAxes$set(self(), x);
-  }
-
-  public final int getCAxes(long index) {
-    return dinput_h.DIEFFECT_DX5.cAxes$get(self(), index);
-  }
-
-  public final int getCAxes() {
-    return dinput_h.DIEFFECT_DX5.cAxes$get(self());
-  }
-
-  public final int getDwGain(long index) {
-    return dinput_h.DIEFFECT_DX5.dwGain$get(self(), index);
-  }
-
-  public final int getDwGain() {
-    return dinput_h.DIEFFECT_DX5.dwGain$get(self());
+  public final void setRglDirection(MemoryAddress x) {
+    dinput_h.DIEFFECT_DX5.rglDirection$set(self(), x);
   }
 
   public final MemoryAddress getRgdwAxes(long index) {
@@ -313,12 +289,20 @@ public class Effect_DX5 {
     return dinput_h.DIEFFECT_DX5.rgdwAxes$get(self());
   }
 
-  public final void setDwDuration(long index, int x) {
-    dinput_h.DIEFFECT_DX5.dwDuration$set(self(), index, x);
+  public final void setLpEnvelope(long index, MemoryAddress x) {
+    dinput_h.DIEFFECT_DX5.lpEnvelope$set(self(), index, x);
   }
 
-  public final void setDwDuration(int x) {
-    dinput_h.DIEFFECT_DX5.dwDuration$set(self(), x);
+  public final void setLpEnvelope(MemoryAddress x) {
+    dinput_h.DIEFFECT_DX5.lpEnvelope$set(self(), x);
+  }
+
+  public final void setCAxes(int x) {
+    dinput_h.DIEFFECT_DX5.cAxes$set(self(), x);
+  }
+
+  public final void setCAxes(long index, int x) {
+    dinput_h.DIEFFECT_DX5.cAxes$set(self(), index, x);
   }
 
   public final MemoryAddress getRglDirection(long index) {
@@ -329,11 +313,27 @@ public class Effect_DX5 {
     return dinput_h.DIEFFECT_DX5.rglDirection$get(self());
   }
 
+  public final MemoryAddress getLpEnvelope(long index) {
+    return dinput_h.DIEFFECT_DX5.lpEnvelope$get(self(), index);
+  }
+
+  public final MemoryAddress getLpEnvelope() {
+    return dinput_h.DIEFFECT_DX5.lpEnvelope$get(self());
+  }
+
   public final void setRgdwAxes(MemoryAddress x) {
     dinput_h.DIEFFECT_DX5.rgdwAxes$set(self(), x);
   }
 
   public final void setRgdwAxes(long index, MemoryAddress x) {
     dinput_h.DIEFFECT_DX5.rgdwAxes$set(self(), index, x);
+  }
+
+  public final int getCAxes() {
+    return dinput_h.DIEFFECT_DX5.cAxes$get(self());
+  }
+
+  public final int getCAxes(long index) {
+    return dinput_h.DIEFFECT_DX5.cAxes$get(self(), index);
   }
 }

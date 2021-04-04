@@ -81,14 +81,6 @@ public class MouseState {
     return dinput_h._DIMOUSESTATE.sizeof();
   }
 
-  public final int getLY(long index) {
-    return dinput_h._DIMOUSESTATE.lY$get(self(), index);
-  }
-
-  public final int getLY() {
-    return dinput_h._DIMOUSESTATE.lY$get(self());
-  }
-
   public final int getLZ(long index) {
     return dinput_h._DIMOUSESTATE.lZ$get(self(), index);
   }
@@ -97,12 +89,28 @@ public class MouseState {
     return dinput_h._DIMOUSESTATE.lZ$get(self());
   }
 
-  public final void setLX(int x) {
-    dinput_h._DIMOUSESTATE.lX$set(self(), x);
+  public final void setLY(long index, int x) {
+    dinput_h._DIMOUSESTATE.lY$set(self(), index, x);
+  }
+
+  public final void setLY(int x) {
+    dinput_h._DIMOUSESTATE.lY$set(self(), x);
   }
 
   public final void setLX(long index, int x) {
     dinput_h._DIMOUSESTATE.lX$set(self(), index, x);
+  }
+
+  public final void setLX(int x) {
+    dinput_h._DIMOUSESTATE.lX$set(self(), x);
+  }
+
+  public final int getLY() {
+    return dinput_h._DIMOUSESTATE.lY$get(self());
+  }
+
+  public final int getLY(long index) {
+    return dinput_h._DIMOUSESTATE.lY$get(self(), index);
   }
 
   public final int getLX() {
@@ -123,13 +131,5 @@ public class MouseState {
 
   public final MemorySegment getRgbButtons() {
     return dinput_h._DIMOUSESTATE.rgbButtons$slice(self());
-  }
-
-  public final void setLY(int x) {
-    dinput_h._DIMOUSESTATE.lY$set(self(), x);
-  }
-
-  public final void setLY(long index, int x) {
-    dinput_h._DIMOUSESTATE.lY$set(self(), index, x);
   }
 }

@@ -79,11 +79,11 @@ public class PropCalPOV {
     return dinput_h.DIPROPCALPOV.diph$slice(self());
   }
 
-  public final MemorySegment getLMin() {
-    return dinput_h.DIPROPCALPOV.lMin$slice(self());
-  }
-
   public final MemorySegment getLMax() {
     return dinput_h.DIPROPCALPOV.lMax$slice(self());
+  }
+
+  public final MemorySegment getLMin() {
+    return dinput_h.DIPROPCALPOV.lMin$slice(self());
   }
 }

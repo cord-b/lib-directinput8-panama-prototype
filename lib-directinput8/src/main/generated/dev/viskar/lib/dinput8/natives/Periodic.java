@@ -84,36 +84,12 @@ public class Periodic {
     return dinput_h.DIPERIODIC.sizeof();
   }
 
-  public final int getLOffset(long index) {
-    return dinput_h.DIPERIODIC.lOffset$get(self(), index);
+  public final int getDwPhase() {
+    return dinput_h.DIPERIODIC.dwPhase$get(self());
   }
 
-  public final int getLOffset() {
-    return dinput_h.DIPERIODIC.lOffset$get(self());
-  }
-
-  public final void setLOffset(long index, int x) {
-    dinput_h.DIPERIODIC.lOffset$set(self(), index, x);
-  }
-
-  public final void setLOffset(int x) {
-    dinput_h.DIPERIODIC.lOffset$set(self(), x);
-  }
-
-  public final int getDwPeriod() {
-    return dinput_h.DIPERIODIC.dwPeriod$get(self());
-  }
-
-  public final int getDwPeriod(long index) {
-    return dinput_h.DIPERIODIC.dwPeriod$get(self(), index);
-  }
-
-  public final int getDwMagnitude() {
-    return dinput_h.DIPERIODIC.dwMagnitude$get(self());
-  }
-
-  public final int getDwMagnitude(long index) {
-    return dinput_h.DIPERIODIC.dwMagnitude$get(self(), index);
+  public final int getDwPhase(long index) {
+    return dinput_h.DIPERIODIC.dwPhase$get(self(), index);
   }
 
   public final void setDwPhase(int x) {
@@ -124,6 +100,22 @@ public class Periodic {
     dinput_h.DIPERIODIC.dwPhase$set(self(), index, x);
   }
 
+  public final void setLOffset(long index, int x) {
+    dinput_h.DIPERIODIC.lOffset$set(self(), index, x);
+  }
+
+  public final void setLOffset(int x) {
+    dinput_h.DIPERIODIC.lOffset$set(self(), x);
+  }
+
+  public final int getLOffset(long index) {
+    return dinput_h.DIPERIODIC.lOffset$get(self(), index);
+  }
+
+  public final int getLOffset() {
+    return dinput_h.DIPERIODIC.lOffset$get(self());
+  }
+
   public final void setDwMagnitude(int x) {
     dinput_h.DIPERIODIC.dwMagnitude$set(self(), x);
   }
@@ -132,19 +124,27 @@ public class Periodic {
     dinput_h.DIPERIODIC.dwMagnitude$set(self(), index, x);
   }
 
+  public final int getDwMagnitude() {
+    return dinput_h.DIPERIODIC.dwMagnitude$get(self());
+  }
+
+  public final int getDwMagnitude(long index) {
+    return dinput_h.DIPERIODIC.dwMagnitude$get(self(), index);
+  }
+
+  public final int getDwPeriod() {
+    return dinput_h.DIPERIODIC.dwPeriod$get(self());
+  }
+
+  public final int getDwPeriod(long index) {
+    return dinput_h.DIPERIODIC.dwPeriod$get(self(), index);
+  }
+
   public final void setDwPeriod(long index, int x) {
     dinput_h.DIPERIODIC.dwPeriod$set(self(), index, x);
   }
 
   public final void setDwPeriod(int x) {
     dinput_h.DIPERIODIC.dwPeriod$set(self(), x);
-  }
-
-  public final int getDwPhase() {
-    return dinput_h.DIPERIODIC.dwPhase$get(self());
-  }
-
-  public final int getDwPhase(long index) {
-    return dinput_h.DIPERIODIC.dwPhase$get(self(), index);
   }
 }

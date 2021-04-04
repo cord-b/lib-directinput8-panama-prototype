@@ -108,6 +108,18 @@ public class ActionA {
     return dinput_h._DIACTIONA.sizeof();
   }
 
+  public final MemorySegment getGuidInstance() {
+    return dinput_h._DIACTIONA.guidInstance$slice(self());
+  }
+
+  public final void setUAppData(long x) {
+    dinput_h._DIACTIONA.uAppData$set(self(), x);
+  }
+
+  public final void setUAppData(long index, long x) {
+    dinput_h._DIACTIONA.uAppData$set(self(), index, x);
+  }
+
   public final long getUAppData() {
     return dinput_h._DIACTIONA.uAppData$get(self());
   }
@@ -116,32 +128,28 @@ public class ActionA {
     return dinput_h._DIACTIONA.uAppData$get(self(), index);
   }
 
-  public final MemoryAddress getLptszActionName(long index) {
-    return dinput_h._DIACTIONA.lptszActionName$get(self(), index);
+  public final int getDwHow(long index) {
+    return dinput_h._DIACTIONA.dwHow$get(self(), index);
   }
 
-  public final MemoryAddress getLptszActionName() {
-    return dinput_h._DIACTIONA.lptszActionName$get(self());
+  public final int getDwHow() {
+    return dinput_h._DIACTIONA.dwHow$get(self());
   }
 
-  public final void setLptszActionName(MemoryAddress x) {
-    dinput_h._DIACTIONA.lptszActionName$set(self(), x);
+  public final void setDwHow(int x) {
+    dinput_h._DIACTIONA.dwHow$set(self(), x);
   }
 
-  public final void setLptszActionName(long index, MemoryAddress x) {
-    dinput_h._DIACTIONA.lptszActionName$set(self(), index, x);
+  public final void setDwHow(long index, int x) {
+    dinput_h._DIACTIONA.dwHow$set(self(), index, x);
   }
 
-  public final MemorySegment getGuidInstance() {
-    return dinput_h._DIACTIONA.guidInstance$slice(self());
+  public final void setDwFlags(int x) {
+    dinput_h._DIACTIONA.dwFlags$set(self(), x);
   }
 
-  public final void setUAppData(long index, long x) {
-    dinput_h._DIACTIONA.uAppData$set(self(), index, x);
-  }
-
-  public final void setUAppData(long x) {
-    dinput_h._DIACTIONA.uAppData$set(self(), x);
+  public final void setDwFlags(long index, int x) {
+    dinput_h._DIACTIONA.dwFlags$set(self(), index, x);
   }
 
   public final int getDwFlags(long index) {
@@ -152,44 +160,28 @@ public class ActionA {
     return dinput_h._DIACTIONA.dwFlags$get(self());
   }
 
-  public final int getDwHow() {
-    return dinput_h._DIACTIONA.dwHow$get(self());
-  }
-
-  public final int getDwHow(long index) {
-    return dinput_h._DIACTIONA.dwHow$get(self(), index);
-  }
-
-  public final void setDwHow(long index, int x) {
-    dinput_h._DIACTIONA.dwHow$set(self(), index, x);
-  }
-
-  public final void setDwHow(int x) {
-    dinput_h._DIACTIONA.dwHow$set(self(), x);
-  }
-
-  public final void setDwFlags(long index, int x) {
-    dinput_h._DIACTIONA.dwFlags$set(self(), index, x);
-  }
-
-  public final void setDwFlags(int x) {
-    dinput_h._DIACTIONA.dwFlags$set(self(), x);
-  }
-
-  public final int getDwObjID(long index) {
-    return dinput_h._DIACTIONA.dwObjID$get(self(), index);
-  }
-
-  public final int getDwObjID() {
-    return dinput_h._DIACTIONA.dwObjID$get(self());
-  }
-
   public final void setDwObjID(long index, int x) {
     dinput_h._DIACTIONA.dwObjID$set(self(), index, x);
   }
 
   public final void setDwObjID(int x) {
     dinput_h._DIACTIONA.dwObjID$set(self(), x);
+  }
+
+  public final int getDwObjID() {
+    return dinput_h._DIACTIONA.dwObjID$get(self());
+  }
+
+  public final int getDwObjID(long index) {
+    return dinput_h._DIACTIONA.dwObjID$get(self(), index);
+  }
+
+  public final void setUResIdString(long index, int x) {
+    dinput_h._DIACTIONA.uResIdString$set(self(), index, x);
+  }
+
+  public final void setUResIdString(int x) {
+    dinput_h._DIACTIONA.uResIdString$set(self(), x);
   }
 
   public final int getDwSemantic() {
@@ -208,19 +200,27 @@ public class ActionA {
     dinput_h._DIACTIONA.dwSemantic$set(self(), x);
   }
 
-  public final void setUResIdString(long index, int x) {
-    dinput_h._DIACTIONA.uResIdString$set(self(), index, x);
-  }
-
-  public final void setUResIdString(int x) {
-    dinput_h._DIACTIONA.uResIdString$set(self(), x);
-  }
-
   public final int getUResIdString() {
     return dinput_h._DIACTIONA.uResIdString$get(self());
   }
 
   public final int getUResIdString(long index) {
     return dinput_h._DIACTIONA.uResIdString$get(self(), index);
+  }
+
+  public final MemoryAddress getLptszActionName() {
+    return dinput_h._DIACTIONA.lptszActionName$get(self());
+  }
+
+  public final MemoryAddress getLptszActionName(long index) {
+    return dinput_h._DIACTIONA.lptszActionName$get(self(), index);
+  }
+
+  public final void setLptszActionName(MemoryAddress x) {
+    dinput_h._DIACTIONA.lptszActionName$set(self(), x);
+  }
+
+  public final void setLptszActionName(long index, MemoryAddress x) {
+    dinput_h._DIACTIONA.lptszActionName$set(self(), index, x);
   }
 }

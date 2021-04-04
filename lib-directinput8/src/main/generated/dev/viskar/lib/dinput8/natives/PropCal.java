@@ -86,6 +86,34 @@ public class PropCal {
     return dinput_h.DIPROPCAL.sizeof();
   }
 
+  public final MemorySegment getDiph() {
+    return dinput_h.DIPROPCAL.diph$slice(self());
+  }
+
+  public final int getLMin() {
+    return dinput_h.DIPROPCAL.lMin$get(self());
+  }
+
+  public final int getLMin(long index) {
+    return dinput_h.DIPROPCAL.lMin$get(self(), index);
+  }
+
+  public final int getLMax(long index) {
+    return dinput_h.DIPROPCAL.lMax$get(self(), index);
+  }
+
+  public final int getLMax() {
+    return dinput_h.DIPROPCAL.lMax$get(self());
+  }
+
+  public final void setLMax(long index, int x) {
+    dinput_h.DIPROPCAL.lMax$set(self(), index, x);
+  }
+
+  public final void setLMax(int x) {
+    dinput_h.DIPROPCAL.lMax$set(self(), x);
+  }
+
   public final int getLCenter() {
     return dinput_h.DIPROPCAL.lCenter$get(self());
   }
@@ -94,47 +122,19 @@ public class PropCal {
     return dinput_h.DIPROPCAL.lCenter$get(self(), index);
   }
 
-  public final void setLCenter(int x) {
-    dinput_h.DIPROPCAL.lCenter$set(self(), x);
-  }
-
-  public final void setLCenter(long index, int x) {
-    dinput_h.DIPROPCAL.lCenter$set(self(), index, x);
-  }
-
-  public final MemorySegment getDiph() {
-    return dinput_h.DIPROPCAL.diph$slice(self());
-  }
-
-  public final int getLMin(long index) {
-    return dinput_h.DIPROPCAL.lMin$get(self(), index);
-  }
-
-  public final int getLMin() {
-    return dinput_h.DIPROPCAL.lMin$get(self());
+  public final void setLMin(long index, int x) {
+    dinput_h.DIPROPCAL.lMin$set(self(), index, x);
   }
 
   public final void setLMin(int x) {
     dinput_h.DIPROPCAL.lMin$set(self(), x);
   }
 
-  public final void setLMin(long index, int x) {
-    dinput_h.DIPROPCAL.lMin$set(self(), index, x);
+  public final void setLCenter(int x) {
+    dinput_h.DIPROPCAL.lCenter$set(self(), x);
   }
 
-  public final void setLMax(int x) {
-    dinput_h.DIPROPCAL.lMax$set(self(), x);
-  }
-
-  public final void setLMax(long index, int x) {
-    dinput_h.DIPROPCAL.lMax$set(self(), index, x);
-  }
-
-  public final int getLMax() {
-    return dinput_h.DIPROPCAL.lMax$get(self());
-  }
-
-  public final int getLMax(long index) {
-    return dinput_h.DIPROPCAL.lMax$get(self(), index);
+  public final void setLCenter(long index, int x) {
+    dinput_h.DIPROPCAL.lCenter$set(self(), index, x);
   }
 }

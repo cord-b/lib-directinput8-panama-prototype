@@ -110,20 +110,8 @@ public class DeviceImageInfo {
     return dinput_h._DIDEVICEIMAGEINFOW.sizeof();
   }
 
-  public final MemorySegment getRcCalloutRect() {
-    return dinput_h._DIDEVICEIMAGEINFOW.rcCalloutRect$slice(self());
-  }
-
-  public final MemorySegment getRgptCalloutLine() {
-    return dinput_h._DIDEVICEIMAGEINFOW.rgptCalloutLine$slice(self());
-  }
-
-  public final int getDwFlags() {
-    return dinput_h._DIDEVICEIMAGEINFOW.dwFlags$get(self());
-  }
-
-  public final int getDwFlags(long index) {
-    return dinput_h._DIDEVICEIMAGEINFOW.dwFlags$get(self(), index);
+  public final MemorySegment getTszImagePath() {
+    return dinput_h._DIDEVICEIMAGEINFOW.tszImagePath$slice(self());
   }
 
   public final void setDwFlags(int x) {
@@ -134,24 +122,12 @@ public class DeviceImageInfo {
     dinput_h._DIDEVICEIMAGEINFOW.dwFlags$set(self(), index, x);
   }
 
-  public final void setDwcValidPts(long index, int x) {
-    dinput_h._DIDEVICEIMAGEINFOW.dwcValidPts$set(self(), index, x);
+  public final int getDwFlags(long index) {
+    return dinput_h._DIDEVICEIMAGEINFOW.dwFlags$get(self(), index);
   }
 
-  public final void setDwcValidPts(int x) {
-    dinput_h._DIDEVICEIMAGEINFOW.dwcValidPts$set(self(), x);
-  }
-
-  public final int getDwcValidPts(long index) {
-    return dinput_h._DIDEVICEIMAGEINFOW.dwcValidPts$get(self(), index);
-  }
-
-  public final int getDwcValidPts() {
-    return dinput_h._DIDEVICEIMAGEINFOW.dwcValidPts$get(self());
-  }
-
-  public final MemorySegment getTszImagePath() {
-    return dinput_h._DIDEVICEIMAGEINFOW.tszImagePath$slice(self());
+  public final int getDwFlags() {
+    return dinput_h._DIDEVICEIMAGEINFOW.dwFlags$get(self());
   }
 
   public final int getDwViewID() {
@@ -162,24 +138,12 @@ public class DeviceImageInfo {
     return dinput_h._DIDEVICEIMAGEINFOW.dwViewID$get(self(), index);
   }
 
-  public final void setDwViewID(int x) {
-    dinput_h._DIDEVICEIMAGEINFOW.dwViewID$set(self(), x);
+  public final void setDwTextAlign(int x) {
+    dinput_h._DIDEVICEIMAGEINFOW.dwTextAlign$set(self(), x);
   }
 
-  public final void setDwViewID(long index, int x) {
-    dinput_h._DIDEVICEIMAGEINFOW.dwViewID$set(self(), index, x);
-  }
-
-  public final MemorySegment getRcOverlay() {
-    return dinput_h._DIDEVICEIMAGEINFOW.rcOverlay$slice(self());
-  }
-
-  public final int getDwObjID() {
-    return dinput_h._DIDEVICEIMAGEINFOW.dwObjID$get(self());
-  }
-
-  public final int getDwObjID(long index) {
-    return dinput_h._DIDEVICEIMAGEINFOW.dwObjID$get(self(), index);
+  public final void setDwTextAlign(long index, int x) {
+    dinput_h._DIDEVICEIMAGEINFOW.dwTextAlign$set(self(), index, x);
   }
 
   public final void setDwObjID(int x) {
@@ -190,12 +154,12 @@ public class DeviceImageInfo {
     dinput_h._DIDEVICEIMAGEINFOW.dwObjID$set(self(), index, x);
   }
 
-  public final void setDwTextAlign(long index, int x) {
-    dinput_h._DIDEVICEIMAGEINFOW.dwTextAlign$set(self(), index, x);
+  public final void setDwcValidPts(int x) {
+    dinput_h._DIDEVICEIMAGEINFOW.dwcValidPts$set(self(), x);
   }
 
-  public final void setDwTextAlign(int x) {
-    dinput_h._DIDEVICEIMAGEINFOW.dwTextAlign$set(self(), x);
+  public final void setDwcValidPts(long index, int x) {
+    dinput_h._DIDEVICEIMAGEINFOW.dwcValidPts$set(self(), index, x);
   }
 
   public final int getDwTextAlign(long index) {
@@ -204,5 +168,41 @@ public class DeviceImageInfo {
 
   public final int getDwTextAlign() {
     return dinput_h._DIDEVICEIMAGEINFOW.dwTextAlign$get(self());
+  }
+
+  public final void setDwViewID(int x) {
+    dinput_h._DIDEVICEIMAGEINFOW.dwViewID$set(self(), x);
+  }
+
+  public final void setDwViewID(long index, int x) {
+    dinput_h._DIDEVICEIMAGEINFOW.dwViewID$set(self(), index, x);
+  }
+
+  public final int getDwObjID(long index) {
+    return dinput_h._DIDEVICEIMAGEINFOW.dwObjID$get(self(), index);
+  }
+
+  public final int getDwObjID() {
+    return dinput_h._DIDEVICEIMAGEINFOW.dwObjID$get(self());
+  }
+
+  public final int getDwcValidPts() {
+    return dinput_h._DIDEVICEIMAGEINFOW.dwcValidPts$get(self());
+  }
+
+  public final int getDwcValidPts(long index) {
+    return dinput_h._DIDEVICEIMAGEINFOW.dwcValidPts$get(self(), index);
+  }
+
+  public final MemorySegment getRcOverlay() {
+    return dinput_h._DIDEVICEIMAGEINFOW.rcOverlay$slice(self());
+  }
+
+  public final MemorySegment getRcCalloutRect() {
+    return dinput_h._DIDEVICEIMAGEINFOW.rcCalloutRect$slice(self());
+  }
+
+  public final MemorySegment getRgptCalloutLine() {
+    return dinput_h._DIDEVICEIMAGEINFOW.rgptCalloutLine$slice(self());
   }
 }

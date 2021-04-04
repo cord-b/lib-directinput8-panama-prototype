@@ -69,19 +69,19 @@ public class ConstantForce {
     return dinput_h.DICONSTANTFORCE.sizeof();
   }
 
-  public final void setLMagnitude(int x) {
-    dinput_h.DICONSTANTFORCE.lMagnitude$set(self(), x);
-  }
-
-  public final void setLMagnitude(long index, int x) {
-    dinput_h.DICONSTANTFORCE.lMagnitude$set(self(), index, x);
+  public final int getLMagnitude(long index) {
+    return dinput_h.DICONSTANTFORCE.lMagnitude$get(self(), index);
   }
 
   public final int getLMagnitude() {
     return dinput_h.DICONSTANTFORCE.lMagnitude$get(self());
   }
 
-  public final int getLMagnitude(long index) {
-    return dinput_h.DICONSTANTFORCE.lMagnitude$get(self(), index);
+  public final void setLMagnitude(long index, int x) {
+    dinput_h.DICONSTANTFORCE.lMagnitude$set(self(), index, x);
+  }
+
+  public final void setLMagnitude(int x) {
+    dinput_h.DICONSTANTFORCE.lMagnitude$set(self(), x);
   }
 }

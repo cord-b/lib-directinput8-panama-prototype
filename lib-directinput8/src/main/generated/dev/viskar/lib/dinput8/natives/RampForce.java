@@ -82,27 +82,27 @@ public class RampForce {
     return dinput_h.DIRAMPFORCE.lEnd$get(self());
   }
 
-  public final void setLStart(int x) {
-    dinput_h.DIRAMPFORCE.lStart$set(self(), x);
-  }
-
   public final void setLStart(long index, int x) {
     dinput_h.DIRAMPFORCE.lStart$set(self(), index, x);
   }
 
-  public final int getLStart(long index) {
-    return dinput_h.DIRAMPFORCE.lStart$get(self(), index);
+  public final void setLStart(int x) {
+    dinput_h.DIRAMPFORCE.lStart$set(self(), x);
   }
 
-  public final int getLStart() {
-    return dinput_h.DIRAMPFORCE.lStart$get(self());
+  public final void setLEnd(int x) {
+    dinput_h.DIRAMPFORCE.lEnd$set(self(), x);
   }
 
   public final void setLEnd(long index, int x) {
     dinput_h.DIRAMPFORCE.lEnd$set(self(), index, x);
   }
 
-  public final void setLEnd(int x) {
-    dinput_h.DIRAMPFORCE.lEnd$set(self(), x);
+  public final int getLStart() {
+    return dinput_h.DIRAMPFORCE.lStart$get(self());
+  }
+
+  public final int getLStart(long index) {
+    return dinput_h.DIRAMPFORCE.lStart$get(self(), index);
   }
 }

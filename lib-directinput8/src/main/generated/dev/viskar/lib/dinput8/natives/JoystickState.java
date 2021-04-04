@@ -100,28 +100,12 @@ public class JoystickState {
     return dinput_h.DIJOYSTATE.sizeof();
   }
 
-  public final int getLRz() {
-    return dinput_h.DIJOYSTATE.lRz$get(self());
+  public final int getLZ(long index) {
+    return dinput_h.DIJOYSTATE.lZ$get(self(), index);
   }
 
-  public final int getLRz(long index) {
-    return dinput_h.DIJOYSTATE.lRz$get(self(), index);
-  }
-
-  public final int getLY(long index) {
-    return dinput_h.DIJOYSTATE.lY$get(self(), index);
-  }
-
-  public final int getLY() {
-    return dinput_h.DIJOYSTATE.lY$get(self());
-  }
-
-  public final void setLRx(int x) {
-    dinput_h.DIJOYSTATE.lRx$set(self(), x);
-  }
-
-  public final void setLRx(long index, int x) {
-    dinput_h.DIJOYSTATE.lRx$set(self(), index, x);
+  public final int getLZ() {
+    return dinput_h.DIJOYSTATE.lZ$get(self());
   }
 
   public final int getLRy() {
@@ -140,28 +124,44 @@ public class JoystickState {
     return dinput_h.DIJOYSTATE.lRx$get(self());
   }
 
-  public final MemorySegment getRgdwPOV() {
-    return dinput_h.DIJOYSTATE.rgdwPOV$slice(self());
+  public final void setLRx(long index, int x) {
+    dinput_h.DIJOYSTATE.lRx$set(self(), index, x);
   }
 
-  public final int getLZ(long index) {
-    return dinput_h.DIJOYSTATE.lZ$get(self(), index);
+  public final void setLRx(int x) {
+    dinput_h.DIJOYSTATE.lRx$set(self(), x);
   }
 
-  public final int getLZ() {
-    return dinput_h.DIJOYSTATE.lZ$get(self());
+  public final void setLY(int x) {
+    dinput_h.DIJOYSTATE.lY$set(self(), x);
   }
 
-  public final void setLX(int x) {
-    dinput_h.DIJOYSTATE.lX$set(self(), x);
+  public final void setLY(long index, int x) {
+    dinput_h.DIJOYSTATE.lY$set(self(), index, x);
   }
 
   public final void setLX(long index, int x) {
     dinput_h.DIJOYSTATE.lX$set(self(), index, x);
   }
 
-  public final MemorySegment getRglSlider() {
-    return dinput_h.DIJOYSTATE.rglSlider$slice(self());
+  public final void setLX(int x) {
+    dinput_h.DIJOYSTATE.lX$set(self(), x);
+  }
+
+  public final int getLY(long index) {
+    return dinput_h.DIJOYSTATE.lY$get(self(), index);
+  }
+
+  public final int getLY() {
+    return dinput_h.DIJOYSTATE.lY$get(self());
+  }
+
+  public final void setLRy(long index, int x) {
+    dinput_h.DIJOYSTATE.lRy$set(self(), index, x);
+  }
+
+  public final void setLRy(int x) {
+    dinput_h.DIJOYSTATE.lRy$set(self(), x);
   }
 
   public final int getLX() {
@@ -170,6 +170,14 @@ public class JoystickState {
 
   public final int getLX(long index) {
     return dinput_h.DIJOYSTATE.lX$get(self(), index);
+  }
+
+  public final int getLRz() {
+    return dinput_h.DIJOYSTATE.lRz$get(self());
+  }
+
+  public final int getLRz(long index) {
+    return dinput_h.DIJOYSTATE.lRz$get(self(), index);
   }
 
   public final void setLRz(long index, int x) {
@@ -188,23 +196,15 @@ public class JoystickState {
     dinput_h.DIJOYSTATE.lZ$set(self(), index, x);
   }
 
+  public final MemorySegment getRglSlider() {
+    return dinput_h.DIJOYSTATE.rglSlider$slice(self());
+  }
+
   public final MemorySegment getRgbButtons() {
     return dinput_h.DIJOYSTATE.rgbButtons$slice(self());
   }
 
-  public final void setLRy(int x) {
-    dinput_h.DIJOYSTATE.lRy$set(self(), x);
-  }
-
-  public final void setLRy(long index, int x) {
-    dinput_h.DIJOYSTATE.lRy$set(self(), index, x);
-  }
-
-  public final void setLY(long index, int x) {
-    dinput_h.DIJOYSTATE.lY$set(self(), index, x);
-  }
-
-  public final void setLY(int x) {
-    dinput_h.DIJOYSTATE.lY$set(self(), x);
+  public final MemorySegment getRgdwPOV() {
+    return dinput_h.DIJOYSTATE.rgdwPOV$slice(self());
   }
 }

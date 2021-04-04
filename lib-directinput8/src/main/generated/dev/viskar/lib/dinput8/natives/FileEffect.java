@@ -83,43 +83,43 @@ public class FileEffect {
     return dinput_h.DIFILEEFFECT.sizeof();
   }
 
-  public final MemorySegment getSzFriendlyName() {
-    return dinput_h.DIFILEEFFECT.szFriendlyName$slice(self());
+  public final int getDwSize(long index) {
+    return dinput_h.DIFILEEFFECT.dwSize$get(self(), index);
   }
 
   public final int getDwSize() {
     return dinput_h.DIFILEEFFECT.dwSize$get(self());
   }
 
-  public final int getDwSize(long index) {
-    return dinput_h.DIFILEEFFECT.dwSize$get(self(), index);
+  public final void setDwSize(long index, int x) {
+    dinput_h.DIFILEEFFECT.dwSize$set(self(), index, x);
   }
 
   public final void setDwSize(int x) {
     dinput_h.DIFILEEFFECT.dwSize$set(self(), x);
   }
 
-  public final void setDwSize(long index, int x) {
-    dinput_h.DIFILEEFFECT.dwSize$set(self(), index, x);
+  public final MemorySegment getSzFriendlyName() {
+    return dinput_h.DIFILEEFFECT.szFriendlyName$slice(self());
   }
 
-  public final MemorySegment getGuidEffect() {
-    return dinput_h.DIFILEEFFECT.GuidEffect$slice(self());
-  }
-
-  public final void setLpDiEffect(MemoryAddress x) {
-    dinput_h.DIFILEEFFECT.lpDiEffect$set(self(), x);
-  }
-
-  public final void setLpDiEffect(long index, MemoryAddress x) {
-    dinput_h.DIFILEEFFECT.lpDiEffect$set(self(), index, x);
+  public final MemoryAddress getLpDiEffect() {
+    return dinput_h.DIFILEEFFECT.lpDiEffect$get(self());
   }
 
   public final MemoryAddress getLpDiEffect(long index) {
     return dinput_h.DIFILEEFFECT.lpDiEffect$get(self(), index);
   }
 
-  public final MemoryAddress getLpDiEffect() {
-    return dinput_h.DIFILEEFFECT.lpDiEffect$get(self());
+  public final MemorySegment getGuidEffect() {
+    return dinput_h.DIFILEEFFECT.GuidEffect$slice(self());
+  }
+
+  public final void setLpDiEffect(long index, MemoryAddress x) {
+    dinput_h.DIFILEEFFECT.lpDiEffect$set(self(), index, x);
+  }
+
+  public final void setLpDiEffect(MemoryAddress x) {
+    dinput_h.DIFILEEFFECT.lpDiEffect$set(self(), x);
   }
 }

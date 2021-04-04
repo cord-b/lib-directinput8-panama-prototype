@@ -138,20 +138,172 @@ public class DeviceObjectInstance {
     return dinput_h.DIDEVICEOBJECTINSTANCEW.sizeof();
   }
 
-  public final void setDwFFForceResolution(int x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.dwFFForceResolution$set(self(), x);
+  public final int getDwSize() {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwSize$get(self());
   }
 
-  public final void setDwFFForceResolution(long index, int x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.dwFFForceResolution$set(self(), index, x);
+  public final int getDwSize(long index) {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwSize$get(self(), index);
   }
 
-  public final void setWCollectionNumber(long index, short x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.wCollectionNumber$set(self(), index, x);
+  public final MemorySegment getTszName() {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.tszName$slice(self());
   }
 
-  public final void setWCollectionNumber(short x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.wCollectionNumber$set(self(), x);
+  public final void setDwSize(int x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.dwSize$set(self(), x);
+  }
+
+  public final void setDwSize(long index, int x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.dwSize$set(self(), index, x);
+  }
+
+  public final int getDwOfs(long index) {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwOfs$get(self(), index);
+  }
+
+  public final int getDwOfs() {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwOfs$get(self());
+  }
+
+  public final void setDwOfs(long index, int x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.dwOfs$set(self(), index, x);
+  }
+
+  public final void setDwOfs(int x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.dwOfs$set(self(), x);
+  }
+
+  public final void setWUsage(short x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.wUsage$set(self(), x);
+  }
+
+  public final void setWUsage(long index, short x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.wUsage$set(self(), index, x);
+  }
+
+  public final void setWUsagePage(long index, short x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.wUsagePage$set(self(), index, x);
+  }
+
+  public final void setWUsagePage(short x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.wUsagePage$set(self(), x);
+  }
+
+  public final short getWUsagePage(long index) {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.wUsagePage$get(self(), index);
+  }
+
+  public final short getWUsagePage() {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.wUsagePage$get(self());
+  }
+
+  public final short getWUsage() {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.wUsage$get(self());
+  }
+
+  public final short getWUsage(long index) {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.wUsage$get(self(), index);
+  }
+
+  public final int getDwDimension(long index) {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwDimension$get(self(), index);
+  }
+
+  public final int getDwDimension() {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwDimension$get(self());
+  }
+
+  public final void setDwDimension(int x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.dwDimension$set(self(), x);
+  }
+
+  public final void setDwDimension(long index, int x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.dwDimension$set(self(), index, x);
+  }
+
+  public final void setWExponent(short x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.wExponent$set(self(), x);
+  }
+
+  public final void setWExponent(long index, short x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.wExponent$set(self(), index, x);
+  }
+
+  public final short getWReportId() {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.wReportId$get(self());
+  }
+
+  public final short getWReportId(long index) {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.wReportId$get(self(), index);
+  }
+
+  public final void setWReportId(long index, short x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.wReportId$set(self(), index, x);
+  }
+
+  public final void setWReportId(short x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.wReportId$set(self(), x);
+  }
+
+  public final void setDwFlags(long index, int x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.dwFlags$set(self(), index, x);
+  }
+
+  public final void setDwFlags(int x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.dwFlags$set(self(), x);
+  }
+
+  public final int getDwFFMaxForce() {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwFFMaxForce$get(self());
+  }
+
+  public final int getDwFFMaxForce(long index) {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwFFMaxForce$get(self(), index);
+  }
+
+  public final void setDwFFMaxForce(int x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.dwFFMaxForce$set(self(), x);
+  }
+
+  public final void setDwFFMaxForce(long index, int x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.dwFFMaxForce$set(self(), index, x);
+  }
+
+  public final void setDwType(long index, int x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.dwType$set(self(), index, x);
+  }
+
+  public final void setDwType(int x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.dwType$set(self(), x);
+  }
+
+  public final int getDwType(long index) {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwType$get(self(), index);
+  }
+
+  public final int getDwType() {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwType$get(self());
+  }
+
+  public final short getWExponent(long index) {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.wExponent$get(self(), index);
+  }
+
+  public final short getWExponent() {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.wExponent$get(self());
+  }
+
+  public final int getDwFlags() {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwFlags$get(self());
+  }
+
+  public final int getDwFlags(long index) {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwFlags$get(self(), index);
+  }
+
+  public final MemorySegment getGuidType() {
+    return dinput_h.DIDEVICEOBJECTINSTANCEW.guidType$slice(self());
   }
 
   public final int getDwFFForceResolution(long index) {
@@ -170,12 +322,12 @@ public class DeviceObjectInstance {
     return dinput_h.DIDEVICEOBJECTINSTANCEW.wCollectionNumber$get(self(), index);
   }
 
-  public final void setWDesignatorIndex(long index, short x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.wDesignatorIndex$set(self(), index, x);
+  public final void setWCollectionNumber(long index, short x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.wCollectionNumber$set(self(), index, x);
   }
 
-  public final void setWDesignatorIndex(short x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.wDesignatorIndex$set(self(), x);
+  public final void setWCollectionNumber(short x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.wCollectionNumber$set(self(), x);
   }
 
   public final short getWDesignatorIndex(long index) {
@@ -186,171 +338,19 @@ public class DeviceObjectInstance {
     return dinput_h.DIDEVICEOBJECTINSTANCEW.wDesignatorIndex$get(self());
   }
 
-  public final MemorySegment getTszName() {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.tszName$slice(self());
+  public final void setWDesignatorIndex(long index, short x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.wDesignatorIndex$set(self(), index, x);
   }
 
-  public final int getDwSize() {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwSize$get(self());
+  public final void setWDesignatorIndex(short x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.wDesignatorIndex$set(self(), x);
   }
 
-  public final int getDwSize(long index) {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwSize$get(self(), index);
+  public final void setDwFFForceResolution(int x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.dwFFForceResolution$set(self(), x);
   }
 
-  public final void setDwSize(int x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.dwSize$set(self(), x);
-  }
-
-  public final void setDwSize(long index, int x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.dwSize$set(self(), index, x);
-  }
-
-  public final short getWUsagePage() {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.wUsagePage$get(self());
-  }
-
-  public final short getWUsagePage(long index) {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.wUsagePage$get(self(), index);
-  }
-
-  public final void setDwOfs(long index, int x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.dwOfs$set(self(), index, x);
-  }
-
-  public final void setDwOfs(int x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.dwOfs$set(self(), x);
-  }
-
-  public final short getWUsage() {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.wUsage$get(self());
-  }
-
-  public final short getWUsage(long index) {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.wUsage$get(self(), index);
-  }
-
-  public final int getDwOfs(long index) {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwOfs$get(self(), index);
-  }
-
-  public final int getDwOfs() {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwOfs$get(self());
-  }
-
-  public final void setWUsage(long index, short x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.wUsage$set(self(), index, x);
-  }
-
-  public final void setWUsage(short x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.wUsage$set(self(), x);
-  }
-
-  public final void setWUsagePage(long index, short x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.wUsagePage$set(self(), index, x);
-  }
-
-  public final void setWUsagePage(short x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.wUsagePage$set(self(), x);
-  }
-
-  public final int getDwType() {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwType$get(self());
-  }
-
-  public final int getDwType(long index) {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwType$get(self(), index);
-  }
-
-  public final void setDwType(long index, int x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.dwType$set(self(), index, x);
-  }
-
-  public final void setDwType(int x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.dwType$set(self(), x);
-  }
-
-  public final MemorySegment getGuidType() {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.guidType$slice(self());
-  }
-
-  public final int getDwFlags() {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwFlags$get(self());
-  }
-
-  public final int getDwFlags(long index) {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwFlags$get(self(), index);
-  }
-
-  public final void setWReportId(short x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.wReportId$set(self(), x);
-  }
-
-  public final void setWReportId(long index, short x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.wReportId$set(self(), index, x);
-  }
-
-  public final int getDwFFMaxForce(long index) {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwFFMaxForce$get(self(), index);
-  }
-
-  public final int getDwFFMaxForce() {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwFFMaxForce$get(self());
-  }
-
-  public final void setDwFFMaxForce(int x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.dwFFMaxForce$set(self(), x);
-  }
-
-  public final void setDwFFMaxForce(long index, int x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.dwFFMaxForce$set(self(), index, x);
-  }
-
-  public final void setWExponent(long index, short x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.wExponent$set(self(), index, x);
-  }
-
-  public final void setWExponent(short x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.wExponent$set(self(), x);
-  }
-
-  public final void setDwDimension(long index, int x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.dwDimension$set(self(), index, x);
-  }
-
-  public final void setDwDimension(int x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.dwDimension$set(self(), x);
-  }
-
-  public final short getWReportId() {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.wReportId$get(self());
-  }
-
-  public final short getWReportId(long index) {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.wReportId$get(self(), index);
-  }
-
-  public final short getWExponent() {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.wExponent$get(self());
-  }
-
-  public final short getWExponent(long index) {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.wExponent$get(self(), index);
-  }
-
-  public final void setDwFlags(int x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.dwFlags$set(self(), x);
-  }
-
-  public final void setDwFlags(long index, int x) {
-    dinput_h.DIDEVICEOBJECTINSTANCEW.dwFlags$set(self(), index, x);
-  }
-
-  public final int getDwDimension(long index) {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwDimension$get(self(), index);
-  }
-
-  public final int getDwDimension() {
-    return dinput_h.DIDEVICEOBJECTINSTANCEW.dwDimension$get(self());
+  public final void setDwFFForceResolution(long index, int x) {
+    dinput_h.DIDEVICEOBJECTINSTANCEW.dwFFForceResolution$set(self(), index, x);
   }
 }

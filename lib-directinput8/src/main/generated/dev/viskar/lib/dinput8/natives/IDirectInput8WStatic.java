@@ -99,15 +99,19 @@ import jdk.incubator.foreign.MemorySegment;
  * Create the file below and provide your class name implementing the service.
  * <pre>
  * <small>META-INF/services/dev.viskar.lib.dinput8.natives.IDirectInput8WStatic$Initializer:</small>
- *   com.example.MyInitializer
+ *   com.example.MyIDirectInput8WInitializer
  * </pre>
  * <strong>Register the Initializer (automatic approach)</strong>
  * <p>
- * Append "::initializerClass" to your "--singleton IDirectInput8W" argument to the generator.
+ * Include "staticInitializer" in your generator.conf configuration for this object:
+ * {
+ *   from.type = IDirectInput8W
+ *   template = static-object
+ *   staticInitializer = com.myapp.MyIDirectInput8WInitializer
+ * }
  * And also provide the path to the resources directory somewhere in the arguments.
  * <pre>
  * --resources ${project.basedir}/src/main/resources
- * --singleton IDirectInput8W::com.example.MyInitializer
  * </pre>
  * </div>
  */

@@ -119,64 +119,12 @@ public class ConfigureDevicesParams {
     return dinput_h._DICONFIGUREDEVICESPARAMSW.dwSize$get(self(), index);
   }
 
-  public final void setDwSize(int x) {
-    dinput_h._DICONFIGUREDEVICESPARAMSW.dwSize$set(self(), x);
-  }
-
   public final void setDwSize(long index, int x) {
     dinput_h._DICONFIGUREDEVICESPARAMSW.dwSize$set(self(), index, x);
   }
 
-  public final void setDwcFormats(int x) {
-    dinput_h._DICONFIGUREDEVICESPARAMSW.dwcFormats$set(self(), x);
-  }
-
-  public final void setDwcFormats(long index, int x) {
-    dinput_h._DICONFIGUREDEVICESPARAMSW.dwcFormats$set(self(), index, x);
-  }
-
-  public final MemorySegment getDics() {
-    return dinput_h._DICONFIGUREDEVICESPARAMSW.dics$slice(self());
-  }
-
-  public final MemoryAddress getLpUnkDDSTarget(long index) {
-    return dinput_h._DICONFIGUREDEVICESPARAMSW.lpUnkDDSTarget$get(self(), index);
-  }
-
-  public final MemoryAddress getLpUnkDDSTarget() {
-    return dinput_h._DICONFIGUREDEVICESPARAMSW.lpUnkDDSTarget$get(self());
-  }
-
-  public final void setLprgFormats(long index, MemoryAddress x) {
-    dinput_h._DICONFIGUREDEVICESPARAMSW.lprgFormats$set(self(), index, x);
-  }
-
-  public final void setLprgFormats(MemoryAddress x) {
-    dinput_h._DICONFIGUREDEVICESPARAMSW.lprgFormats$set(self(), x);
-  }
-
-  public final int getDwcUsers(long index) {
-    return dinput_h._DICONFIGUREDEVICESPARAMSW.dwcUsers$get(self(), index);
-  }
-
-  public final int getDwcUsers() {
-    return dinput_h._DICONFIGUREDEVICESPARAMSW.dwcUsers$get(self());
-  }
-
-  public final void setDwcUsers(long index, int x) {
-    dinput_h._DICONFIGUREDEVICESPARAMSW.dwcUsers$set(self(), index, x);
-  }
-
-  public final void setDwcUsers(int x) {
-    dinput_h._DICONFIGUREDEVICESPARAMSW.dwcUsers$set(self(), x);
-  }
-
-  public final MemoryAddress getLptszUserNames() {
-    return dinput_h._DICONFIGUREDEVICESPARAMSW.lptszUserNames$get(self());
-  }
-
-  public final MemoryAddress getLptszUserNames(long index) {
-    return dinput_h._DICONFIGUREDEVICESPARAMSW.lptszUserNames$get(self(), index);
+  public final void setDwSize(int x) {
+    dinput_h._DICONFIGUREDEVICESPARAMSW.dwSize$set(self(), x);
   }
 
   public final int getDwcFormats() {
@@ -187,12 +135,20 @@ public class ConfigureDevicesParams {
     return dinput_h._DICONFIGUREDEVICESPARAMSW.dwcFormats$get(self(), index);
   }
 
-  public final void setLpUnkDDSTarget(long index, MemoryAddress x) {
-    dinput_h._DICONFIGUREDEVICESPARAMSW.lpUnkDDSTarget$set(self(), index, x);
+  public final int getDwcUsers() {
+    return dinput_h._DICONFIGUREDEVICESPARAMSW.dwcUsers$get(self());
   }
 
-  public final void setLpUnkDDSTarget(MemoryAddress x) {
-    dinput_h._DICONFIGUREDEVICESPARAMSW.lpUnkDDSTarget$set(self(), x);
+  public final int getDwcUsers(long index) {
+    return dinput_h._DICONFIGUREDEVICESPARAMSW.dwcUsers$get(self(), index);
+  }
+
+  public final void setLptszUserNames(long index, MemoryAddress x) {
+    dinput_h._DICONFIGUREDEVICESPARAMSW.lptszUserNames$set(self(), index, x);
+  }
+
+  public final void setLptszUserNames(MemoryAddress x) {
+    dinput_h._DICONFIGUREDEVICESPARAMSW.lptszUserNames$set(self(), x);
   }
 
   public final MemoryAddress getLprgFormats() {
@@ -203,27 +159,71 @@ public class ConfigureDevicesParams {
     return dinput_h._DICONFIGUREDEVICESPARAMSW.lprgFormats$get(self(), index);
   }
 
-  public final void setLptszUserNames(MemoryAddress x) {
-    dinput_h._DICONFIGUREDEVICESPARAMSW.lptszUserNames$set(self(), x);
+  public final void setDwcFormats(int x) {
+    dinput_h._DICONFIGUREDEVICESPARAMSW.dwcFormats$set(self(), x);
   }
 
-  public final void setLptszUserNames(long index, MemoryAddress x) {
-    dinput_h._DICONFIGUREDEVICESPARAMSW.lptszUserNames$set(self(), index, x);
+  public final void setDwcFormats(long index, int x) {
+    dinput_h._DICONFIGUREDEVICESPARAMSW.dwcFormats$set(self(), index, x);
   }
 
-  public final MemoryAddress getHwnd(long index) {
-    return dinput_h._DICONFIGUREDEVICESPARAMSW.hwnd$get(self(), index);
+  public final void setDwcUsers(int x) {
+    dinput_h._DICONFIGUREDEVICESPARAMSW.dwcUsers$set(self(), x);
+  }
+
+  public final void setDwcUsers(long index, int x) {
+    dinput_h._DICONFIGUREDEVICESPARAMSW.dwcUsers$set(self(), index, x);
+  }
+
+  public final MemoryAddress getLptszUserNames() {
+    return dinput_h._DICONFIGUREDEVICESPARAMSW.lptszUserNames$get(self());
+  }
+
+  public final MemoryAddress getLptszUserNames(long index) {
+    return dinput_h._DICONFIGUREDEVICESPARAMSW.lptszUserNames$get(self(), index);
+  }
+
+  public final MemorySegment getDics() {
+    return dinput_h._DICONFIGUREDEVICESPARAMSW.dics$slice(self());
   }
 
   public final MemoryAddress getHwnd() {
     return dinput_h._DICONFIGUREDEVICESPARAMSW.hwnd$get(self());
   }
 
-  public final void setHwnd(long index, MemoryAddress x) {
-    dinput_h._DICONFIGUREDEVICESPARAMSW.hwnd$set(self(), index, x);
+  public final MemoryAddress getHwnd(long index) {
+    return dinput_h._DICONFIGUREDEVICESPARAMSW.hwnd$get(self(), index);
+  }
+
+  public final MemoryAddress getLpUnkDDSTarget(long index) {
+    return dinput_h._DICONFIGUREDEVICESPARAMSW.lpUnkDDSTarget$get(self(), index);
+  }
+
+  public final MemoryAddress getLpUnkDDSTarget() {
+    return dinput_h._DICONFIGUREDEVICESPARAMSW.lpUnkDDSTarget$get(self());
   }
 
   public final void setHwnd(MemoryAddress x) {
     dinput_h._DICONFIGUREDEVICESPARAMSW.hwnd$set(self(), x);
+  }
+
+  public final void setHwnd(long index, MemoryAddress x) {
+    dinput_h._DICONFIGUREDEVICESPARAMSW.hwnd$set(self(), index, x);
+  }
+
+  public final void setLprgFormats(long index, MemoryAddress x) {
+    dinput_h._DICONFIGUREDEVICESPARAMSW.lprgFormats$set(self(), index, x);
+  }
+
+  public final void setLprgFormats(MemoryAddress x) {
+    dinput_h._DICONFIGUREDEVICESPARAMSW.lprgFormats$set(self(), x);
+  }
+
+  public final void setLpUnkDDSTarget(MemoryAddress x) {
+    dinput_h._DICONFIGUREDEVICESPARAMSW.lpUnkDDSTarget$set(self(), x);
+  }
+
+  public final void setLpUnkDDSTarget(long index, MemoryAddress x) {
+    dinput_h._DICONFIGUREDEVICESPARAMSW.lpUnkDDSTarget$set(self(), index, x);
   }
 }

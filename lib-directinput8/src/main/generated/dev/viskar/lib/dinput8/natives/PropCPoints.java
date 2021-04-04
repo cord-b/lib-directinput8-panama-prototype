@@ -81,12 +81,16 @@ public class PropCPoints {
     return dinput_h.DIPROPCPOINTS.sizeof();
   }
 
-  public final MemorySegment getDiph() {
-    return dinput_h.DIPROPCPOINTS.diph$slice(self());
+  public final int getDwCPointsNum(long index) {
+    return dinput_h.DIPROPCPOINTS.dwCPointsNum$get(self(), index);
   }
 
-  public final MemorySegment getCp() {
-    return dinput_h.DIPROPCPOINTS.cp$slice(self());
+  public final int getDwCPointsNum() {
+    return dinput_h.DIPROPCPOINTS.dwCPointsNum$get(self());
+  }
+
+  public final MemorySegment getDiph() {
+    return dinput_h.DIPROPCPOINTS.diph$slice(self());
   }
 
   public final void setDwCPointsNum(int x) {
@@ -97,11 +101,7 @@ public class PropCPoints {
     dinput_h.DIPROPCPOINTS.dwCPointsNum$set(self(), index, x);
   }
 
-  public final int getDwCPointsNum() {
-    return dinput_h.DIPROPCPOINTS.dwCPointsNum$get(self());
-  }
-
-  public final int getDwCPointsNum(long index) {
-    return dinput_h.DIPROPCPOINTS.dwCPointsNum$get(self(), index);
+  public final MemorySegment getCp() {
+    return dinput_h.DIPROPCPOINTS.cp$slice(self());
   }
 }

@@ -109,44 +109,12 @@ public class DeviceImageInfoHeader {
     return dinput_h._DIDEVICEIMAGEINFOHEADERW.sizeof();
   }
 
-  public final int getDwSizeImageInfo() {
-    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwSizeImageInfo$get(self());
-  }
-
-  public final int getDwSizeImageInfo(long index) {
-    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwSizeImageInfo$get(self(), index);
-  }
-
-  public final void setDwSizeImageInfo(long index, int x) {
-    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwSizeImageInfo$set(self(), index, x);
-  }
-
-  public final void setDwSizeImageInfo(int x) {
-    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwSizeImageInfo$set(self(), x);
-  }
-
-  public final void setLprgImageInfoArray(MemoryAddress x) {
-    dinput_h._DIDEVICEIMAGEINFOHEADERW.lprgImageInfoArray$set(self(), x);
-  }
-
-  public final void setLprgImageInfoArray(long index, MemoryAddress x) {
-    dinput_h._DIDEVICEIMAGEINFOHEADERW.lprgImageInfoArray$set(self(), index, x);
-  }
-
-  public final MemoryAddress getLprgImageInfoArray(long index) {
-    return dinput_h._DIDEVICEIMAGEINFOHEADERW.lprgImageInfoArray$get(self(), index);
-  }
-
-  public final MemoryAddress getLprgImageInfoArray() {
-    return dinput_h._DIDEVICEIMAGEINFOHEADERW.lprgImageInfoArray$get(self());
+  public final int getDwSize() {
+    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwSize$get(self());
   }
 
   public final int getDwSize(long index) {
     return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwSize$get(self(), index);
-  }
-
-  public final int getDwSize() {
-    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwSize$get(self());
   }
 
   public final void setDwSize(int x) {
@@ -157,12 +125,36 @@ public class DeviceImageInfoHeader {
     dinput_h._DIDEVICEIMAGEINFOHEADERW.dwSize$set(self(), index, x);
   }
 
-  public final int getDwcViews(long index) {
-    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcViews$get(self(), index);
+  public final void setDwBufferUsed(int x) {
+    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferUsed$set(self(), x);
   }
 
-  public final int getDwcViews() {
-    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcViews$get(self());
+  public final void setDwBufferUsed(long index, int x) {
+    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferUsed$set(self(), index, x);
+  }
+
+  public final int getDwBufferSize() {
+    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferSize$get(self());
+  }
+
+  public final int getDwBufferSize(long index) {
+    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferSize$get(self(), index);
+  }
+
+  public final void setDwcAxes(long index, int x) {
+    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcAxes$set(self(), index, x);
+  }
+
+  public final void setDwcAxes(int x) {
+    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcAxes$set(self(), x);
+  }
+
+  public final int getDwcAxes() {
+    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcAxes$get(self());
+  }
+
+  public final int getDwcAxes(long index) {
+    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcAxes$get(self(), index);
   }
 
   public final void setDwcViews(long index, int x) {
@@ -173,12 +165,52 @@ public class DeviceImageInfoHeader {
     dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcViews$set(self(), x);
   }
 
+  public final int getDwBufferUsed() {
+    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferUsed$get(self());
+  }
+
+  public final int getDwBufferUsed(long index) {
+    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferUsed$get(self(), index);
+  }
+
+  public final void setDwBufferSize(int x) {
+    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferSize$set(self(), x);
+  }
+
+  public final void setDwBufferSize(long index, int x) {
+    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferSize$set(self(), index, x);
+  }
+
+  public final int getDwcViews(long index) {
+    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcViews$get(self(), index);
+  }
+
+  public final int getDwcViews() {
+    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcViews$get(self());
+  }
+
   public final int getDwcButtons() {
     return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcButtons$get(self());
   }
 
   public final int getDwcButtons(long index) {
     return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcButtons$get(self(), index);
+  }
+
+  public final void setDwcPOVs(int x) {
+    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcPOVs$set(self(), x);
+  }
+
+  public final void setDwcPOVs(long index, int x) {
+    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcPOVs$set(self(), index, x);
+  }
+
+  public final int getDwcPOVs(long index) {
+    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcPOVs$get(self(), index);
+  }
+
+  public final int getDwcPOVs() {
+    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcPOVs$get(self());
   }
 
   public final void setDwcButtons(long index, int x) {
@@ -189,67 +221,35 @@ public class DeviceImageInfoHeader {
     dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcButtons$set(self(), x);
   }
 
-  public final int getDwcPOVs() {
-    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcPOVs$get(self());
+  public final void setDwSizeImageInfo(long index, int x) {
+    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwSizeImageInfo$set(self(), index, x);
   }
 
-  public final int getDwcPOVs(long index) {
-    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcPOVs$get(self(), index);
+  public final void setDwSizeImageInfo(int x) {
+    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwSizeImageInfo$set(self(), x);
   }
 
-  public final void setDwBufferSize(long index, int x) {
-    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferSize$set(self(), index, x);
+  public final MemoryAddress getLprgImageInfoArray(long index) {
+    return dinput_h._DIDEVICEIMAGEINFOHEADERW.lprgImageInfoArray$get(self(), index);
   }
 
-  public final void setDwBufferSize(int x) {
-    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferSize$set(self(), x);
+  public final MemoryAddress getLprgImageInfoArray() {
+    return dinput_h._DIDEVICEIMAGEINFOHEADERW.lprgImageInfoArray$get(self());
   }
 
-  public final int getDwcAxes(long index) {
-    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcAxes$get(self(), index);
+  public final int getDwSizeImageInfo() {
+    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwSizeImageInfo$get(self());
   }
 
-  public final int getDwcAxes() {
-    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcAxes$get(self());
+  public final int getDwSizeImageInfo(long index) {
+    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwSizeImageInfo$get(self(), index);
   }
 
-  public final int getDwBufferSize(long index) {
-    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferSize$get(self(), index);
+  public final void setLprgImageInfoArray(MemoryAddress x) {
+    dinput_h._DIDEVICEIMAGEINFOHEADERW.lprgImageInfoArray$set(self(), x);
   }
 
-  public final int getDwBufferSize() {
-    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferSize$get(self());
-  }
-
-  public final void setDwcAxes(int x) {
-    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcAxes$set(self(), x);
-  }
-
-  public final void setDwcAxes(long index, int x) {
-    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcAxes$set(self(), index, x);
-  }
-
-  public final void setDwBufferUsed(long index, int x) {
-    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferUsed$set(self(), index, x);
-  }
-
-  public final void setDwBufferUsed(int x) {
-    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferUsed$set(self(), x);
-  }
-
-  public final int getDwBufferUsed() {
-    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferUsed$get(self());
-  }
-
-  public final int getDwBufferUsed(long index) {
-    return dinput_h._DIDEVICEIMAGEINFOHEADERW.dwBufferUsed$get(self(), index);
-  }
-
-  public final void setDwcPOVs(long index, int x) {
-    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcPOVs$set(self(), index, x);
-  }
-
-  public final void setDwcPOVs(int x) {
-    dinput_h._DIDEVICEIMAGEINFOHEADERW.dwcPOVs$set(self(), x);
+  public final void setLprgImageInfoArray(long index, MemoryAddress x) {
+    dinput_h._DIDEVICEIMAGEINFOHEADERW.lprgImageInfoArray$set(self(), index, x);
   }
 }
